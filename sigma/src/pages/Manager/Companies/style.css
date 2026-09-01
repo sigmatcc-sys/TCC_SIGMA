@@ -1,0 +1,904 @@
+/* ==========================================
+   MANAGER COMPANIES
+========================================== */
+
+.manager-companies {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* ==========================================
+   TEMA ESCURO
+========================================== */
+
+.manager-companies.dark {
+    background: #080e1a;
+    color: #e5e7eb;
+}
+
+
+/* ==========================================
+   TEMA CLARO
+========================================== */
+
+.manager-companies.light {
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+
+/* ==========================================
+   SIDEBAR
+========================================== */
+
+.manager-companies-sidebar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 228px;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 100;
+
+    border-right: 1px solid;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.dark .manager-companies-sidebar {
+    background: #101827;
+    border-color: #1d2b43;
+}
+
+
+.light .manager-companies-sidebar {
+    background: #ffffff;
+    border-color: #e5e7eb;
+}
+
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.manager-companies-logo {
+    height: 79px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 0 16px;
+
+    border-bottom: 1px solid;
+}
+
+
+.dark .manager-companies-logo {
+    border-color: #1d2b43;
+}
+
+
+.light .manager-companies-logo {
+    border-color: #e5e7eb;
+}
+
+
+.manager-companies-logo-icon {
+    width: 37px;
+    height: 37px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed,
+            #9333ea
+        );
+}
+
+
+.manager-companies-logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.manager-companies-logo-text strong {
+    font-size: 1.08rem;
+
+    letter-spacing: 0.02em;
+}
+
+
+.manager-companies-logo-text span {
+    margin-top: 1px;
+
+    font-size: 0.68rem;
+
+    color: #8fa0ba;
+}
+
+
+/* ==========================================
+   MENU
+========================================== */
+
+.manager-companies-menu {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+
+    padding: 12px 8px;
+
+    flex: 1;
+}
+
+
+.manager-companies-menu-item {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 11px 14px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 0.78rem;
+    font-weight: 500;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.dark .manager-companies-menu-item {
+    color: #94a3b8;
+}
+
+
+.light .manager-companies-menu-item {
+    color: #64748b;
+}
+
+
+.dark .manager-companies-menu-item:hover {
+    background:
+        rgba(139, 61, 240, 0.12);
+
+    color: #d8c7ff;
+}
+
+
+.light .manager-companies-menu-item:hover {
+    background: #f2edff;
+
+    color: #7c3aed;
+}
+
+
+/* ATIVO */
+
+.manager-companies-menu-item.active {
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            90deg,
+            #743bd8,
+            #8b3df0
+        );
+
+    box-shadow:
+        0 5px 14px
+        rgba(124, 58, 237, 0.25);
+}
+
+.manager-companies-menu-item.active:hover {
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed,
+            #9333ea
+        );
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.manager-companies-sidebar-footer {
+    padding: 12px 8px 14px;
+
+    border-top: 1px solid;
+}
+
+
+.dark .manager-companies-sidebar-footer {
+    border-color: #1d2b43;
+}
+
+
+.light .manager-companies-sidebar-footer {
+    border-color: #e5e7eb;
+}
+
+
+/* ==========================================
+   LOGOUT
+========================================== */
+
+.manager-companies-logout {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 11px 14px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    color: #8fa0ba;
+
+    font-size: 0.78rem;
+
+    transition: 0.2s;
+}
+
+
+.manager-companies-logout:hover {
+    color: #f87171;
+
+    background:
+        rgba(239, 68, 68, 0.08);
+}
+
+
+/* ==========================================
+   CONTEÚDO
+========================================== */
+
+.manager-companies-content {
+    width: calc(100% - 228px);
+
+    min-height: 100vh;
+
+    margin-left: 228px;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.manager-companies-header {
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 28px;
+
+    border-bottom: 1px solid;
+}
+
+
+.dark .manager-companies-header {
+    background: #0d1524;
+    border-color: #1d2b43;
+}
+
+
+.light .manager-companies-header {
+    background: #ffffff;
+    border-color: #e5e7eb;
+}
+
+
+.manager-companies-header-spacer {
+    flex: 1;
+}
+
+
+.manager-companies-header-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+/* ==========================================
+   BOTÕES HEADER
+========================================== */
+
+.manager-companies-theme-toggle,
+.manager-companies-notification,
+.manager-companies-open-menu {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 9px;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.dark .manager-companies-theme-toggle,
+.dark .manager-companies-notification,
+.dark .manager-companies-open-menu {
+    color: #94a3b8;
+}
+
+
+.light .manager-companies-theme-toggle,
+.light .manager-companies-notification,
+.light .manager-companies-open-menu {
+    color: #64748b;
+}
+
+
+.manager-companies-theme-toggle:hover,
+.manager-companies-notification:hover,
+.manager-companies-open-menu:hover {
+    background:
+        rgba(124, 58, 237, 0.1);
+
+    color: #8b3df0;
+}
+
+
+/* ==========================================
+   PERFIL
+========================================== */
+
+.manager-companies-profile {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    margin-left: 3px;
+}
+
+
+.manager-companies-avatar {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 0.68rem;
+    font-weight: 700;
+
+    color: #9b6cff;
+
+    background: #222040;
+
+    border: 1px solid #342f60;
+}
+
+
+.manager-companies-profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.manager-companies-profile-info strong {
+    font-size: 0.72rem;
+}
+
+
+.manager-companies-profile-info span {
+    margin-top: 1px;
+
+    font-size: 0.62rem;
+
+    color: #8fa0ba;
+}
+
+
+/* ==========================================
+   MAIN
+========================================== */
+
+.manager-companies-main {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 20px 34px;
+}
+
+
+/* ==========================================
+   TÍTULO
+========================================== */
+
+.manager-companies-title {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 17px;
+
+    color: #f1f5f9;
+}
+
+
+.light .manager-companies-title {
+    color: #1f2937;
+}
+
+
+.manager-companies-title svg {
+    color: #60a5fa;
+}
+
+
+.manager-companies-title h1 {
+    margin: 0;
+
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+
+.manager-companies-title span {
+    color: #94a3b8;
+
+    font-size: 0.72rem;
+}
+
+
+/* ==========================================
+   PESQUISA
+========================================== */
+
+.manager-companies-search {
+    width: 290px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 0 10px;
+
+    margin-bottom: 11px;
+
+    border: 1px solid;
+
+    border-radius: 8px;
+}
+
+
+.dark .manager-companies-search {
+    background: #101827;
+    border-color: #29415f;
+}
+
+
+.light .manager-companies-search {
+    background: #ffffff;
+    border-color: #dbe1ea;
+}
+
+
+.manager-companies-search svg {
+    color: #8fa0ba;
+}
+
+
+.manager-companies-search input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: inherit;
+
+    font-family: inherit;
+    font-size: 0.68rem;
+}
+
+
+.manager-companies-search input::placeholder {
+    color: #64748b;
+}
+
+
+/* ==========================================
+   LISTA
+========================================== */
+
+.manager-companies-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+
+/* ==========================================
+   CARD EMPRESA
+========================================== */
+
+.manager-company-card {
+    min-height: 65px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 10px 13px;
+
+    border: 1px solid;
+
+    border-radius: 10px;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.dark .manager-company-card {
+    background: #172235;
+    border-color: #243858;
+}
+
+
+.light .manager-company-card {
+    background: #ffffff;
+    border-color: #e5e7eb;
+}
+
+
+.manager-company-card:hover {
+    transform:
+        translateY(-1px);
+
+    border-color: #3b82f6;
+}
+
+
+/* ==========================================
+   AVATAR
+========================================== */
+
+.manager-company-avatar {
+    width: 32px;
+    height: 32px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    color: #3b82f6;
+
+    background: #182b49;
+}
+
+
+/* ==========================================
+   INFORMAÇÕES
+========================================== */
+
+.manager-company-info {
+    flex: 1;
+
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+
+.manager-company-info strong {
+    color: inherit;
+
+    font-size: 0.73rem;
+}
+
+
+.manager-company-info span {
+    color: #7f93ad;
+
+    font-size: 0.61rem;
+}
+
+
+.manager-company-info small {
+    color: #8fa0ba;
+
+    font-size: 0.58rem;
+}
+
+
+/* ==========================================
+   AÇÕES
+========================================== */
+
+.manager-company-actions {
+    display: flex;
+
+    gap: 7px;
+}
+
+
+.manager-company-edit,
+.manager-company-delete {
+    width: 27px;
+    height: 27px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid;
+
+    border-radius: 8px;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.dark .manager-company-edit,
+.dark .manager-company-delete {
+    border-color: #243858;
+}
+
+
+.light .manager-company-edit,
+.light .manager-company-delete {
+    border-color: #e5e7eb;
+}
+
+
+.manager-company-edit {
+    color: #94a3b8;
+}
+
+
+.manager-company-edit:hover {
+    color: #60a5fa;
+
+    background:
+        rgba(59, 130, 246, 0.08);
+}
+
+
+.manager-company-delete {
+    color: #7f1d1d;
+}
+
+
+.manager-company-delete:hover {
+    color: #ef4444;
+
+    background:
+        rgba(239, 68, 68, 0.08);
+}
+
+
+/* ==========================================
+   EMPTY
+========================================== */
+
+.manager-companies-empty {
+    min-height: 200px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    color: #8fa0ba;
+
+    border: 1px dashed #263650;
+
+    border-radius: 10px;
+
+    font-size: 0.78rem;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+.manager-companies-open-menu {
+    display: none;
+}
+
+
+.manager-companies-close-menu {
+    display: none;
+
+    margin-left: auto;
+
+    border: none;
+
+    background: transparent;
+
+    color: inherit;
+
+    cursor: pointer;
+}
+
+
+.manager-companies-overlay {
+    display: none;
+}
+
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+@media (max-width: 768px) {
+
+    .manager-companies-sidebar {
+        width: 250px;
+
+        transform:
+            translateX(-100%);
+    }
+
+
+    .manager-companies-sidebar.open {
+        transform:
+            translateX(0);
+    }
+
+
+    .manager-companies-close-menu {
+        display: flex;
+    }
+
+
+    .manager-companies-overlay {
+        display: block;
+
+        position: fixed;
+
+        inset: 0;
+
+        z-index: 90;
+
+        background:
+            rgba(0, 0, 0, 0.55);
+    }
+
+
+    .manager-companies-content {
+        width: 100%;
+
+        margin-left: 0;
+    }
+
+
+    .manager-companies-header {
+        padding: 0 15px;
+    }
+
+
+    .manager-companies-open-menu {
+        display: flex;
+    }
+
+
+    .manager-companies-main {
+        padding: 18px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .manager-companies-profile-info {
+        display: none;
+    }
+
+
+    .manager-companies-search {
+        width: 100%;
+    }
+
+
+    .manager-company-card {
+        gap: 9px;
+
+        padding: 10px;
+    }
+
+
+    .manager-company-info small {
+        white-space: nowrap;
+
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+    }
+
+}

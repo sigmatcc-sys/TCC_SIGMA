@@ -1,0 +1,1082 @@
+/* ==========================================
+   MANAGER DASHBOARD
+========================================== */
+
+.manager-dashboard {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* ==========================================
+   TEMA ESCURO
+========================================== */
+
+.manager-dashboard.dark {
+    background: #080e1a;
+    color: #e5e7eb;
+}
+
+
+/* ==========================================
+   TEMA CLARO
+========================================== */
+
+.manager-dashboard.light {
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+
+/* ==========================================
+   SIDEBAR
+========================================== */
+
+.manager-sidebar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 228px;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 100;
+
+    border-right: 1px solid;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+
+/* DARK */
+
+.dark .manager-sidebar {
+    background: #101827;
+    border-color: #1d2b43;
+}
+
+
+/* LIGHT */
+
+.light .manager-sidebar {
+    background: #ffffff;
+    border-color: #e5e7eb;
+}
+
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.manager-logo {
+    height: 79px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 0 16px;
+
+    border-bottom: 1px solid;
+}
+
+.dark .manager-logo {
+    border-color: #1d2b43;
+}
+
+.light .manager-logo {
+    border-color: #e5e7eb;
+}
+
+
+/* ==========================================
+   LOGO ÍCONE
+========================================== */
+
+.manager-logo-icon {
+    width: 37px;
+    height: 37px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed,
+            #9333ea
+        );
+}
+
+
+/* ==========================================
+   LOGO TEXTO
+========================================== */
+
+.manager-logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.manager-logo-text strong {
+    font-size: 1.08rem;
+
+    letter-spacing: 0.02em;
+}
+
+.manager-logo-text span {
+    margin-top: 1px;
+
+    font-size: 0.68rem;
+
+    color: #8fa0ba;
+}
+
+
+/* ==========================================
+   FECHAR MENU
+========================================== */
+
+.manager-close-menu {
+    display: none;
+
+    margin-left: auto;
+
+    border: none;
+
+    background: transparent;
+
+    color: inherit;
+
+    cursor: pointer;
+}
+
+
+/* ==========================================
+   MENU
+========================================== */
+
+.manager-menu {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+
+    padding: 12px 8px;
+
+    flex: 1;
+}
+
+
+/* ==========================================
+   ITEM MENU
+========================================== */
+
+.manager-menu-item {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 11px 14px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 0.78rem;
+    font-weight: 500;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* DARK */
+
+.dark .manager-menu-item {
+    color: #8fa0ba;
+}
+
+
+/* LIGHT */
+
+.light .manager-menu-item {
+    color: #64748b;
+}
+
+
+/* HOVER */
+
+.dark .manager-menu-item:hover {
+    background: rgba(124, 58, 237, 0.12);
+    color: #dbeafe;
+}
+
+.light .manager-menu-item:hover {
+    background: #f3f0ff;
+    color: #7c3aed;
+}
+
+
+/* ATIVO */
+
+.manager-menu-item.active {
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed,
+            #9333ea
+        );
+
+    box-shadow:
+        0 5px 15px
+        rgba(124, 58, 237, 0.22);
+}
+
+.manager-menu-item.active:hover {
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed,
+            #9333ea
+        );
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.manager-sidebar-footer {
+    padding: 12px 8px 14px;
+
+    border-top: 1px solid;
+}
+
+.dark .manager-sidebar-footer {
+    border-color: #1d2b43;
+}
+
+.light .manager-sidebar-footer {
+    border-color: #e5e7eb;
+}
+
+
+/* ==========================================
+   LOGOUT
+========================================== */
+
+.manager-logout {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 11px 14px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: transparent;
+
+    color: #8fa0ba;
+
+    font-size: 0.78rem;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.manager-logout:hover {
+    color: #f87171;
+
+    background:
+        rgba(239, 68, 68, 0.08);
+}
+
+
+/* ==========================================
+   CONTEÚDO
+========================================== */
+
+.manager-content {
+    width: calc(100% - 228px);
+
+    min-height: 100vh;
+
+    margin-left: 228px;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.manager-header {
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 28px;
+
+    border-bottom: 1px solid;
+}
+
+.dark .manager-header {
+    background: #0d1524;
+    border-color: #1d2b43;
+}
+
+.light .manager-header {
+    background: #ffffff;
+    border-color: #e5e7eb;
+}
+
+
+/* ==========================================
+   HEADER SPACER
+========================================== */
+
+.manager-header-spacer {
+    flex: 1;
+}
+
+
+/* ==========================================
+   HEADER ACTIONS
+========================================== */
+
+.manager-header-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+/* ==========================================
+   BOTÕES HEADER
+========================================== */
+
+.manager-theme-toggle,
+.manager-notification-button,
+.manager-open-menu {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 9px;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.dark .manager-theme-toggle,
+.dark .manager-notification-button,
+.dark .manager-open-menu {
+    color: #8fa0ba;
+}
+
+.light .manager-theme-toggle,
+.light .manager-notification-button,
+.light .manager-open-menu {
+    color: #64748b;
+}
+
+
+.manager-theme-toggle:hover,
+.manager-notification-button:hover,
+.manager-open-menu:hover {
+    color: #8b5cf6;
+
+    background:
+        rgba(139, 92, 246, 0.1);
+}
+
+
+/* ==========================================
+   NOTIFICAÇÕES
+========================================== */
+
+.manager-notification-button {
+    position: relative;
+}
+
+
+.manager-notification-indicator {
+    position: absolute;
+
+    top: 7px;
+    right: 7px;
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #8b5cf6;
+}
+
+
+/* ==========================================
+   PERFIL
+========================================== */
+
+.manager-profile {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    margin-left: 3px;
+}
+
+
+.manager-profile-avatar {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #8b5cf6;
+
+    background:
+        rgba(124, 58, 237, 0.12);
+
+    border: 1px solid
+        rgba(124, 58, 237, 0.25);
+
+    font-size: 0.68rem;
+    font-weight: 700;
+}
+
+
+.manager-profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.manager-profile-info strong {
+    font-size: 0.72rem;
+}
+
+
+.manager-profile-info span {
+    margin-top: 1px;
+
+    font-size: 0.62rem;
+
+    color: #8fa0ba;
+}
+
+
+/* ==========================================
+   MENU MOBILE
+========================================== */
+
+.manager-open-menu {
+    display: none;
+}
+
+
+/* ==========================================
+   CONTEÚDO PRINCIPAL
+========================================== */
+
+.manager-main {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 20px 34px;
+}
+
+
+/* ==========================================
+   BEM-VINDO
+========================================== */
+
+.manager-welcome {
+    margin-bottom: 26px;
+}
+
+
+.manager-welcome h1 {
+    margin: 0 0 5px;
+
+    font-size: 1.28rem;
+
+    font-weight: 700;
+}
+
+
+.manager-welcome p {
+    margin: 0;
+
+    font-size: 0.78rem;
+
+    color: #7890b2;
+}
+
+
+/* ==========================================
+   ESTATÍSTICAS
+========================================== */
+
+.manager-stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 23px;
+}
+
+
+/* ==========================================
+   CARD
+========================================== */
+
+.manager-stat-card {
+    min-height: 126px;
+
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 10px;
+
+    border: 1px solid;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.dark .manager-stat-card {
+    background: #101a2c;
+    border-color: #1d2b43;
+}
+
+.light .manager-stat-card {
+    background: #ffffff;
+    border-color: #e5e7eb;
+}
+
+
+.manager-stat-card:hover {
+    transform: translateY(-2px);
+
+    border-color: #7c3aed;
+}
+
+
+/* ==========================================
+   ÍCONE CARD
+========================================== */
+
+.manager-stat-icon {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 11px;
+
+    border-radius: 10px;
+}
+
+
+/* EMPRESAS */
+
+.manager-stat-icon.companies {
+    color: #4f8ef7;
+
+    background:
+        rgba(59, 130, 246, 0.12);
+}
+
+
+/* PROFISSIONAIS */
+
+.manager-stat-icon.professionals {
+    color: #10b981;
+
+    background:
+        rgba(16, 185, 129, 0.12);
+}
+
+
+/* USUÁRIOS */
+
+.manager-stat-icon.users {
+    color: #f59e0b;
+
+    background:
+        rgba(245, 158, 11, 0.12);
+}
+
+
+/* ACESSOS */
+
+.manager-stat-icon.accesses {
+    color: #8b5cf6;
+
+    background:
+        rgba(139, 92, 246, 0.12);
+}
+
+
+/* ==========================================
+   CONTEÚDO CARD
+========================================== */
+
+.manager-stat-content {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.manager-stat-content strong {
+    font-size: 1.38rem;
+
+    line-height: 1;
+}
+
+
+.manager-stat-content span {
+    font-size: 0.68rem;
+
+    color: #7890b2;
+}
+
+
+/* ==========================================
+   CARD DO GRÁFICO
+========================================== */
+
+.manager-chart-card {
+    width: 100%;
+
+    min-height: 285px;
+
+    padding: 19px;
+
+    border-radius: 10px;
+
+    border: 1px solid;
+}
+
+.dark .manager-chart-card {
+    background: #101a2c;
+    border-color: #1d2b43;
+}
+
+.light .manager-chart-card {
+    background: #ffffff;
+    border-color: #e5e7eb;
+}
+
+
+/* ==========================================
+   HEADER DO GRÁFICO
+========================================== */
+
+.manager-chart-header {
+    margin-bottom: 10px;
+}
+
+
+.manager-chart-header h2 {
+    margin: 0 0 4px;
+
+    font-size: 0.8rem;
+
+    font-weight: 700;
+}
+
+
+.manager-chart-header p {
+    margin: 0;
+
+    font-size: 0.68rem;
+
+    color: #7890b2;
+}
+
+
+/* ==========================================
+   GRÁFICO
+========================================== */
+
+.manager-chart {
+    position: relative;
+
+    height: 205px;
+
+    display: flex;
+
+    margin-top: 5px;
+}
+
+
+/* ==========================================
+   LINHAS
+========================================== */
+
+.chart-grid {
+    width: 45px;
+
+    height: 165px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 0 7px 0 0;
+
+    text-align: right;
+}
+
+
+.chart-grid span {
+    font-size: 0.58rem;
+
+    color: #657895;
+}
+
+
+/* ==========================================
+   BARRAS
+========================================== */
+
+.chart-bars {
+    flex: 1;
+
+    height: 165px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+
+    border-bottom: 1px solid;
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            transparent 0,
+            transparent 40px,
+            rgba(100, 116, 139, 0.08) 40px,
+            rgba(100, 116, 139, 0.08) 41px
+        );
+}
+
+
+.dark .chart-bars {
+    border-color: #1d2b43;
+}
+
+.light .chart-bars {
+    border-color: #e5e7eb;
+}
+
+
+/* ==========================================
+   COLUNA
+========================================== */
+
+.chart-column {
+    height: 100%;
+
+    width: 90px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+/* ==========================================
+   WRAPPER DA BARRA
+========================================== */
+
+.chart-bar-wrapper {
+    width: 40px;
+
+    height: 165px;
+
+    display: flex;
+    align-items: flex-end;
+}
+
+
+/* ==========================================
+   BARRA
+========================================== */
+
+.chart-bar {
+    width: 40px;
+
+    min-height: 3px;
+
+    border-radius: 5px 5px 0 0;
+
+    transition:
+        height 0.4s ease,
+        opacity 0.2s ease;
+}
+
+
+.chart-bar:hover {
+    opacity: 0.8;
+}
+
+
+/* EMPRESAS */
+
+.chart-bar.companies {
+    background: #4f8ef7;
+}
+
+
+/* PROFISSIONAIS */
+
+.chart-bar.professionals {
+    background: #10b981;
+}
+
+
+/* USUÁRIOS */
+
+.chart-bar.users {
+    background: #f59e0b;
+}
+
+
+/* ==========================================
+   LABEL DO GRÁFICO
+========================================== */
+
+.chart-label {
+    margin-top: 6px;
+
+    font-size: 0.62rem;
+
+    color: #7890b2;
+}
+
+
+/* ==========================================
+   OVERLAY
+========================================== */
+
+.manager-overlay {
+    display: none;
+}
+
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+@media (max-width: 1000px) {
+
+    .manager-stats {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* ==========================================
+   TABLET / MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+    /* SIDEBAR */
+
+    .manager-sidebar {
+        width: 260px;
+
+        transform:
+            translateX(-100%);
+    }
+
+
+    .manager-sidebar.open {
+        transform:
+            translateX(0);
+    }
+
+
+    .manager-close-menu {
+        display: flex;
+    }
+
+
+    /* OVERLAY */
+
+    .manager-overlay {
+        display: block;
+
+        position: fixed;
+
+        inset: 0;
+
+        z-index: 90;
+
+        background:
+            rgba(0, 0, 0, 0.55);
+    }
+
+
+    /* CONTEÚDO */
+
+    .manager-content {
+        width: 100%;
+
+        margin-left: 0;
+    }
+
+
+    /* HEADER */
+
+    .manager-header {
+        padding: 0 15px;
+    }
+
+
+    .manager-open-menu {
+        display: flex;
+    }
+
+
+    /* MAIN */
+
+    .manager-main {
+        padding: 20px 18px;
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .manager-profile-info {
+        display: none;
+    }
+
+
+    .manager-chart-card {
+        padding: 15px;
+    }
+
+
+    .chart-column {
+        width: 70px;
+    }
+
+
+    .chart-bar-wrapper {
+        width: 32px;
+    }
+
+
+    .chart-bar {
+        width: 32px;
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE PEQUENO
+========================================== */
+
+@media (max-width: 450px) {
+
+    .manager-stats {
+        grid-template-columns: 1fr;
+    }
+
+
+    .manager-welcome h1 {
+        font-size: 1.18rem;
+    }
+
+
+    .manager-header-actions {
+        gap: 4px;
+    }
+
+
+    .manager-chart {
+        overflow-x: auto;
+    }
+
+
+    .chart-bars {
+        min-width: 270px;
+    }
+
+}

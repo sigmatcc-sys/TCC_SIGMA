@@ -1,0 +1,106 @@
+/* Botão responsável por alternar o tema */
+.theme-button{
+
+    /* Mantém o botão fixo na tela */
+    position:fixed;
+
+    /* Distância do topo */
+    top:25px;
+
+    /* Distância da direita */
+    right:25px;
+
+    /* Largura */
+    width:55px;
+
+    /* Altura */
+    height:55px;
+
+    /* Remove a borda */
+    border:none;
+
+    /* Formato circular */
+    border-radius:50%;
+
+    /* Fundo totalmente transparente */
+    background:transparent;
+
+    /* Cor do ícone */
+    color:white;
+
+    /* Tamanho do ícone */
+    font-size:28px;
+
+    /* Cursor ao passar o mouse */
+    cursor:pointer;
+
+    /* Centraliza o ícone */
+    display:flex;
+
+    /* Centraliza horizontalmente */
+    justify-content:center;
+
+    /* Centraliza verticalmente */
+    align-items:center;
+
+    /* Suaviza as animações */
+    transition:all .3s ease;
+
+    /* Mantém acima dos outros elementos */
+    z-index:999;
+
+}
+
+/* Efeito ao passar o mouse */
+.theme-button:hover{
+
+    /* Fundo branco semitransparente */
+    background:rgba(255,255,255,.12);
+
+    /* Aplica um leve desfoque */
+    backdrop-filter:blur(10px);
+
+    /* Gira e aumenta um pouco */
+    transform:rotate(180deg) scale(1.08);
+
+}
+
+/* Efeito ao clicar */
+.theme-button:active{
+
+    /* Diminui um pouco */
+    transform:scale(.92);
+
+}
+
+/* Cor do ícone no modo escuro */
+.theme-button.dark{
+
+    /* Ícone branco */
+    color:white;
+
+}
+
+/* Cor do ícone no modo claro */
+.theme-button.light{
+
+    /* Ícone preto */
+    color:#111827;
+
+}
+
+/* Hover no modo claro */
+.theme-button.light:hover{
+
+    /* Fundo escuro transparente */
+    background:rgba(0,0,0,.08);
+
+}
+
+/* Hover no modo escuro */
+.theme-button.dark:hover{
+
+    /* Fundo branco transparente */
+    background:rgba(255,255,255,.10);
+
+}

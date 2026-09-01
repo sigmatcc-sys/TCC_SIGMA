@@ -1,0 +1,1080 @@
+/* ==========================================
+   COMPANY CREATE AD
+========================================== */
+
+.company-create-ad {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* ==========================================
+   TEMA ESCURO
+========================================== */
+
+.company-create-ad.dark {
+    background: #111827;
+    color: #e5e7eb;
+}
+
+
+/* ==========================================
+   TEMA CLARO
+========================================== */
+
+.company-create-ad.light {
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+
+/* ==========================================
+   SIDEBAR
+========================================== */
+
+.create-ad-sidebar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 228px;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 100;
+
+    border-right: 1px solid;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.dark .create-ad-sidebar {
+    background: #18202f;
+    border-color: #273244;
+}
+
+
+.light .create-ad-sidebar {
+    background: #ffffff;
+    border-color: #e5e7eb;
+}
+
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.create-ad-logo {
+    height: 79px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 0 18px;
+
+    border-bottom: 1px solid;
+}
+
+
+.dark .create-ad-logo {
+    border-color: #263652;
+}
+
+
+.light .create-ad-logo {
+    border-color: #e5e7eb;
+}
+
+
+.create-ad-logo-icon {
+    width: 37px;
+    height: 37px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    color: #dbeafe;
+
+    background:
+        linear-gradient(
+            135deg,
+            #22c55e,
+            #179445
+        );
+}
+
+
+.create-ad-logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.create-ad-logo-text strong {
+    font-size: 1.08rem;
+    letter-spacing: 0.02em;
+}
+
+
+.create-ad-logo-text span {
+    margin-top: 1px;
+
+    font-size: 0.72rem;
+
+    color: #8fa0ba;
+}
+
+
+/* ==========================================
+   BOTÃO FECHAR
+========================================== */
+
+.create-ad-close-menu {
+    display: none;
+
+    margin-left: auto;
+
+    border: none;
+
+    background: transparent;
+
+    color: inherit;
+
+    cursor: pointer;
+}
+
+
+/* ==========================================
+   MENU
+========================================== */
+
+.create-ad-menu {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+
+    padding: 12px 10px;
+
+    flex: 1;
+}
+
+
+/* ==========================================
+   ITEM DO MENU
+========================================== */
+
+.create-ad-menu-item {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 12px 15px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 0.88rem;
+    font-weight: 500;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.dark .create-ad-menu-item {
+    color: #8fa0ba;
+}
+
+
+.light .create-ad-menu-item {
+    color: #64748b;
+}
+
+
+.dark .create-ad-menu-item:hover {
+    background:
+        rgba(34, 197, 94, 0.2);
+
+    color: #dbeafe;
+}
+
+
+.light .create-ad-menu-item:hover {
+    background: #eff6ff;
+
+    color: #2563eb;
+}
+
+
+.create-ad-menu-item.active {
+    color: #ffffff;
+
+    background: #22c55e;
+
+    box-shadow:
+        0 5px 15px
+        rgba(34, 197, 94, 0.2);
+}
+
+
+.create-ad-menu-item.active:hover {
+    color: #ffffff;
+
+    background: #22c55e;
+}
+
+
+/* ==========================================
+   FOOTER SIDEBAR
+========================================== */
+
+.create-ad-sidebar-footer {
+    padding: 12px 10px 14px;
+
+    border-top: 1px solid;
+}
+
+
+.dark .create-ad-sidebar-footer {
+    border-color: #263652;
+}
+
+
+.light .create-ad-sidebar-footer {
+    border-color: #e5e7eb;
+}
+
+
+/* ==========================================
+   LOGOUT
+========================================== */
+
+.create-ad-logout {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 12px 15px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    color: #8fa0ba;
+
+    font-size: 0.88rem;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.create-ad-logout:hover {
+    color: #f87171;
+
+    background:
+        rgba(239, 68, 68, 0.08);
+}
+
+
+/* ==========================================
+   CONTEÚDO
+========================================== */
+
+.create-ad-content {
+    width: calc(100% - 228px);
+
+    min-height: 100vh;
+
+    margin-left: 228px;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.create-ad-header {
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 28px;
+
+    border-bottom: 1px solid;
+}
+
+
+.dark .create-ad-header {
+    background: #161f30;
+
+    border-color: #263652;
+}
+
+
+.light .create-ad-header {
+    background: #ffffff;
+
+    border-color: #e5e7eb;
+}
+
+
+.create-ad-header-spacer {
+    flex: 1;
+}
+
+
+.create-ad-header-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+/* ==========================================
+   BOTÕES HEADER
+========================================== */
+
+.create-ad-theme-toggle,
+.create-ad-notification-button,
+.create-ad-open-menu {
+    width: 37px;
+    height: 37px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 9px;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.dark .create-ad-theme-toggle,
+.dark .create-ad-notification-button,
+.dark .create-ad-open-menu {
+    color: #8fa0ba;
+}
+
+
+.light .create-ad-theme-toggle,
+.light .create-ad-notification-button,
+.light .create-ad-open-menu {
+    color: #64748b;
+}
+
+
+.create-ad-theme-toggle:hover,
+.create-ad-notification-button:hover,
+.create-ad-open-menu:hover {
+    background:
+        rgba(34, 197, 94, 0.1);
+
+    color: #22c55e;
+}
+
+
+/* ==========================================
+   NOTIFICAÇÃO
+========================================== */
+
+.create-ad-notification-button {
+    position: relative;
+}
+
+
+.create-ad-notification-indicator {
+    position: absolute;
+
+    top: 7px;
+    right: 7px;
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #22c55e;
+}
+
+
+/* ==========================================
+   PERFIL
+========================================== */
+
+.create-ad-profile-header {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    padding-left: 8px;
+
+    text-decoration: none;
+
+    color: inherit;
+}
+
+
+.create-ad-profile-avatar {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 0.68rem;
+    font-weight: 700;
+
+    color: #6ea8ff;
+
+    background: #1b2d4b;
+
+    border: 1px solid #28446e;
+}
+
+
+.create-ad-profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.create-ad-profile-info strong {
+    font-size: 0.77rem;
+}
+
+
+.create-ad-profile-info span {
+    font-size: 0.65rem;
+
+    color: #8fa0ba;
+}
+
+
+/* ==========================================
+   CONTEÚDO PRINCIPAL
+========================================== */
+
+.create-ad-main {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 22px 34px 50px;
+}
+
+
+/* ==========================================
+   VOLTAR
+========================================== */
+
+.create-ad-back {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 20px;
+
+    text-decoration: none;
+
+    color: #8fa0ba;
+
+    font-size: 0.82rem;
+
+    transition:
+        color 0.2s ease;
+}
+
+
+.create-ad-back:hover {
+    color: #22c55e;
+}
+
+
+/* ==========================================
+   TÍTULO
+========================================== */
+
+.create-ad-title {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    margin-bottom: 28px;
+}
+
+
+.create-ad-title-icon {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    color: #22c55e;
+
+    background:
+        rgba(34, 197, 94, 0.12);
+}
+
+
+.create-ad-title h1 {
+    margin: 0 0 5px;
+
+    font-size: 1.4rem;
+}
+
+
+.create-ad-title p {
+    margin: 0;
+
+    font-size: 0.84rem;
+
+    color: #8fa0ba;
+}
+
+
+/* ==========================================
+   FORMULÁRIO
+========================================== */
+
+.create-ad-form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+/* ==========================================
+   SEÇÃO
+========================================== */
+
+.create-ad-section {
+    padding: 22px;
+
+    border: 1px solid;
+
+    border-radius: 13px;
+}
+
+
+.dark .create-ad-section {
+    background: #18202f;
+
+    border-color: #273244;
+}
+
+
+.light .create-ad-section {
+    background: #ffffff;
+
+    border-color: #e5e7eb;
+}
+
+
+/* ==========================================
+   TÍTULO DA SEÇÃO
+========================================== */
+
+.create-ad-section-title {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+
+    color: #22c55e;
+}
+
+
+.create-ad-section-title h2 {
+    margin: 0 0 4px;
+
+    color: inherit;
+
+    font-size: 1rem;
+}
+
+
+.create-ad-section-title p {
+    margin: 0;
+
+    color: #8fa0ba;
+
+    font-size: 0.78rem;
+}
+
+
+/* ==========================================
+   CAMPOS
+========================================== */
+
+.create-ad-field {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+
+    margin-bottom: 17px;
+}
+
+
+.create-ad-field:last-child {
+    margin-bottom: 0;
+}
+
+
+.create-ad-field label {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+
+.create-ad-field input,
+.create-ad-field select,
+.create-ad-field textarea {
+    width: 100%;
+
+    padding: 11px 13px;
+
+    border: 1px solid;
+
+    border-radius: 9px;
+
+    outline: none;
+
+    font-family: inherit;
+    font-size: 0.82rem;
+
+    transition:
+        border 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.dark .create-ad-field input,
+.dark .create-ad-field select,
+.dark .create-ad-field textarea {
+    background: #111827;
+
+    border-color: #273244;
+
+    color: #e5e7eb;
+}
+
+
+.light .create-ad-field input,
+.light .create-ad-field select,
+.light .create-ad-field textarea {
+    background: #ffffff;
+
+    border-color: #dbe1ea;
+
+    color: #1f2937;
+}
+
+
+.create-ad-field input:focus,
+.create-ad-field select:focus,
+.create-ad-field textarea:focus {
+    border-color: #22c55e;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(34, 197, 94, 0.1);
+}
+
+
+.create-ad-field textarea {
+    resize: vertical;
+
+    min-height: 130px;
+}
+
+
+/* ==========================================
+   GRID
+========================================== */
+
+.create-ad-grid {
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr;
+
+    gap: 15px;
+}
+
+
+/* ==========================================
+   UPLOAD
+========================================== */
+
+.image-upload {
+    width: 100%;
+    min-height: 210px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    border: 1px dashed #22c55e;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.image-upload:hover {
+    background:
+        rgba(34, 197, 94, 0.05);
+}
+
+
+.image-upload input {
+    display: none;
+}
+
+
+.image-upload-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    color: #22c55e;
+
+    background:
+        rgba(34, 197, 94, 0.1);
+}
+
+
+.image-upload strong {
+    font-size: 0.84rem;
+}
+
+
+.image-upload span {
+    font-size: 0.74rem;
+
+    color: #8fa0ba;
+}
+
+
+/* ==========================================
+   PREVIEW
+========================================== */
+
+.image-preview {
+    width: 100%;
+    height: 260px;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* ==========================================
+   AÇÕES
+========================================== */
+
+.create-ad-actions {
+    display: flex;
+    justify-content: flex-end;
+
+    gap: 12px;
+}
+
+
+.create-ad-cancel,
+.create-ad-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 10px 17px;
+
+    border-radius: 9px;
+
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* ==========================================
+   CANCELAR
+========================================== */
+
+.create-ad-cancel {
+    border: 1px solid #273244;
+
+    background: transparent;
+
+    color: #8fa0ba;
+}
+
+
+.create-ad-cancel:hover {
+    background:
+        rgba(239, 68, 68, 0.08);
+
+    color: #f87171;
+}
+
+
+/* ==========================================
+   PUBLICAR
+========================================== */
+
+.create-ad-submit {
+    border: none;
+
+    color: #ffffff;
+
+    background: #22c55e;
+}
+
+
+.create-ad-submit:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 6px 15px
+        rgba(34, 197, 94, 0.2);
+}
+
+
+.create-ad-submit:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* ==========================================
+   MENU MOBILE
+========================================== */
+
+.create-ad-open-menu {
+    display: none;
+}
+
+
+/* ==========================================
+   OVERLAY MOBILE
+========================================== */
+
+.create-ad-overlay {
+    display: none;
+}
+
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+@media (max-width: 768px) {
+
+    /* SIDEBAR */
+
+    .create-ad-sidebar {
+        width: 260px;
+
+        transform:
+            translateX(-100%);
+    }
+
+
+    .create-ad-sidebar.open {
+        transform:
+            translateX(0);
+    }
+
+
+    .create-ad-close-menu {
+        display: flex;
+    }
+
+
+    /* OVERLAY */
+
+    .create-ad-overlay {
+        display: block;
+
+        position: fixed;
+
+        inset: 0;
+
+        z-index: 90;
+
+        background:
+            rgba(0, 0, 0, 0.55);
+    }
+
+
+    /* CONTEÚDO */
+
+    .create-ad-content {
+        width: 100%;
+
+        margin-left: 0;
+    }
+
+
+    /* HEADER */
+
+    .create-ad-header {
+        padding: 0 15px;
+    }
+
+
+    .create-ad-open-menu {
+        display: flex;
+    }
+
+
+    /* MAIN */
+
+    .create-ad-main {
+        padding: 22px 18px 40px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    /* PERFIL */
+
+    .create-ad-profile-info {
+        display: none;
+    }
+
+
+    /* GRID */
+
+    .create-ad-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* BOTÕES */
+
+    .create-ad-actions {
+        flex-direction: column-reverse;
+    }
+
+
+    .create-ad-cancel,
+    .create-ad-submit {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .create-ad-title {
+        align-items: flex-start;
+    }
+
+
+    .create-ad-title h1 {
+        font-size: 1.2rem;
+    }
+
+
+    .create-ad-section {
+        padding: 17px;
+    }
+
+
+    .create-ad-header-actions {
+        gap: 5px;
+    }
+
+}

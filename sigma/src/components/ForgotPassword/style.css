@@ -1,0 +1,334 @@
+/* ==========================================
+   Página
+========================================== */
+
+.forgot-password-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  transition: background .3s ease;
+}
+
+/* Tema Claro */
+
+.forgot-password-page.light {
+  background: #f4f6f8;
+}
+
+/* Tema Escuro */
+
+.forgot-password-page.dark {
+  background: #111827;
+}
+
+/* ==========================================
+   Card
+========================================== */
+
+.forgot-password-card {
+  width: 100%;
+  max-width: 500px;
+
+  padding: 2.5rem;
+
+  border-radius: 24px;
+
+  transition: .3s;
+}
+
+.light .forgot-password-card {
+  background: #ffffff;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, .08);
+}
+
+.dark .forgot-password-card {
+  background: #1f2937;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, .35);
+}
+
+/* ==========================================
+   Botão Voltar
+========================================== */
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+
+  margin-bottom: 2rem;
+
+  text-decoration: none;
+  font-weight: 600;
+  font-size: .95rem;
+
+  transition: .25s;
+}
+
+.light .back-button {
+  color: #6b7280;
+}
+
+.dark .back-button {
+  color: #9ca3af;
+}
+
+.back-button:hover {
+  color: #22c55e;
+  gap: .8rem;
+}
+
+/* ==========================================
+   Cabeçalho
+========================================== */
+
+.forgot-password-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.icon-box {
+  width: 72px;
+  height: 72px;
+
+  margin: 0 auto 1.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 18px;
+
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+
+  color: white;
+
+  box-shadow: 0 10px 25px rgba(34,197,94,.35);
+}
+
+.forgot-password-header h1 {
+  margin-bottom: .4rem;
+  font-size: 2rem;
+}
+
+.light .forgot-password-header h1 {
+  color: #111827;
+}
+
+.dark .forgot-password-header h1 {
+  color: white;
+}
+
+.forgot-password-header p {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: .8rem;
+}
+
+.light .forgot-password-header p {
+  color: #16a34a;
+}
+
+.dark .forgot-password-header p {
+  color: #4ade80;
+}
+
+.forgot-description {
+  display: block;
+
+  font-size: .95rem;
+  line-height: 1.5;
+}
+
+.light .forgot-description {
+  color: #6b7280;
+}
+
+.dark .forgot-description {
+  color: #9ca3af;
+}
+
+/* ==========================================
+   Formulário
+========================================== */
+
+.forgot-password-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+
+  margin-bottom: 2rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: .45rem;
+}
+
+.input-group label {
+  font-size: .95rem;
+  font-weight: 600;
+}
+
+.light .input-group label {
+  color: #374151;
+}
+
+.dark .input-group label {
+  color: #e5e7eb;
+}
+
+/* ==========================================
+   Input com Ícone
+========================================== */
+
+.input-icon {
+  display: flex;
+  align-items: center;
+
+  gap: .8rem;
+
+  padding: .9rem 1rem;
+
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+
+  transition: .25s;
+}
+
+.light .input-icon {
+  background: white;
+}
+
+.dark .input-icon {
+  background: #374151;
+  border-color: #4b5563;
+}
+
+.input-icon svg {
+  color: #22c55e;
+}
+
+.input-icon input {
+  flex: 1;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  font-size: .95rem;
+}
+
+.light .input-icon input {
+  color: #111827;
+}
+
+.dark .input-icon input {
+  color: white;
+}
+
+.input-icon:focus-within {
+  border-color: #22c55e;
+  box-shadow: 0 0 0 3px rgba(34,197,94,.15);
+}
+
+/* ==========================================
+   Botão
+========================================== */
+
+.forgot-button {
+  width: 100%;
+
+  padding: 1rem;
+
+  border: none;
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  color: white;
+
+  background: #22c55e;
+
+  transition: .25s;
+}
+
+.forgot-button:hover {
+  background: #16a34a;
+}
+
+/* ==========================================
+   Rodapé
+========================================== */
+
+.forgot-password-footer {
+  text-align: center;
+}
+
+.forgot-password-footer p {
+  margin-bottom: .5rem;
+}
+
+.light .forgot-password-footer p {
+  color: #6b7280;
+}
+
+.dark .forgot-password-footer p {
+  color: #9ca3af;
+}
+
+.forgot-password-footer a {
+  text-decoration: none;
+  font-weight: 600;
+
+  color: #22c55e;
+
+  transition: .2s;
+}
+
+.forgot-password-footer a:hover {
+  color: #16a34a;
+}
+
+/* ==========================================
+   Responsividade
+========================================== */
+
+@media (max-width: 768px) {
+
+  .forgot-password-page {
+    padding: 1rem;
+  }
+
+  .forgot-password-card {
+    padding: 2rem;
+  }
+
+  .forgot-password-header h1 {
+    font-size: 1.7rem;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .forgot-password-card {
+    padding: 1.5rem;
+  }
+
+  .icon-box {
+    width: 64px;
+    height: 64px;
+  }
+
+  .forgot-password-header h1 {
+    font-size: 1.5rem;
+  }
+
+}
