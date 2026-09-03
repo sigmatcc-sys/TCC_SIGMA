@@ -5,7 +5,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
 // Importa o sistema de rotas
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 // Importa o Provider responsável por controlar o tema da aplicação
 import { ThemeProvider } from "./context/ThemeContext";
@@ -47,7 +47,7 @@ import ManagerCompanies from "./pages/Manager/Companies";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <ThemeProvider>
-      <BrowserRouter>
+      <HashRouter>
 
         <Routes>
 
@@ -169,7 +169,7 @@ createRoot(document.getElementById("root")).render(
 
         </Routes>
 
-      </BrowserRouter>
+      </HashRouter>
     </ThemeProvider>
   </StrictMode>
 );
