@@ -1,0 +1,250 @@
+/* ========================================= */
+/* CONTAINER PRINCIPAL                       */
+/* ========================================= */
+
+/* Grupo do campo */
+.auth-input{
+
+    /* Espaço inferior */
+    margin-bottom:22px;
+
+}
+
+/* Label */
+.auth-input label{
+
+    /* Exibe como bloco */
+    display:block;
+
+    /* Espaço abaixo */
+    margin-bottom:8px;
+
+    /* Peso da fonte */
+    font-weight:600;
+
+    /* Herda a cor do tema */
+    color:inherit;
+
+}
+
+/* ========================================= */
+/* CONTAINER DO INPUT                        */
+/* ========================================= */
+
+/* Container */
+.auth-input-container{
+
+    /* Permite posicionamento absoluto dos ícones */
+    position:relative;
+
+    /* Flexbox */
+    display:flex;
+
+    /* Centraliza verticalmente */
+    align-items:center;
+
+}
+
+/* ========================================= */
+/* ÍCONE                                    */
+/* ========================================= */
+
+/* Ícone */
+.auth-input-icon{
+
+    position:absolute;
+
+    left:16px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    stroke:#ffffff;
+
+    z-index:2;
+
+    pointer-events:none;
+
+}
+
+/* ========================================= */
+/* INPUT                                     */
+/* ========================================= */
+
+/* Campo */
+.auth-input-container input{
+
+    /* Ocupa toda a largura */
+    width:100%;
+
+    /* Espaçamento interno */
+    padding:15px 16px 15px 48px;
+
+    /* Fundo */
+    background:rgba(255,255,255,.08);
+
+    /* Remove borda padrão */
+    border:1px solid rgba(255,255,255,.15);
+
+    /* Bordas arredondadas */
+    border-radius:12px;
+
+    /* Cor do texto */
+    color:inherit;
+
+    /* Tamanho da fonte */
+    font-size:15px;
+
+    /* Remove outline */
+    outline:none;
+
+    /* Suaviza alterações */
+    transition:all .3s ease;
+
+}
+
+/* Placeholder */
+.auth-input-container input::placeholder{
+
+    /* Cor */
+    color:#94a3b8;
+
+}
+
+/* Hover */
+.auth-input-container:hover input{
+
+    /* Clareia o fundo */
+    background:rgba(255,255,255,.12);
+
+}
+
+/* Campo focado */
+.auth-input-container input:focus{
+
+    /* Fundo */
+    background:rgba(255,255,255,.14);
+
+    /* Borda verde */
+    border-color:#16a34a;
+
+    /* Brilho */
+    box-shadow:0 0 0 4px rgba(22,163,74,.15);
+
+}
+
+/* ========================================= */
+/* TEMA CLARO                               */
+/* ========================================= */
+
+
+.auth-layout.light .auth-input-icon{
+
+    stroke: #111827;    
+}
+
+/* Input */
+.auth-layout.light .auth-input-container input{
+
+    /* Fundo branco */
+    background:#ffffff;
+
+    /* Texto */
+    color:#111827;
+
+    /* Borda */
+    border:1px solid #9ca3af;
+
+}
+
+/* Placeholder */
+.auth-layout.light .auth-input-container input::placeholder{
+
+    /* Cor */
+    color:#6b7280;
+
+}
+
+/* Hover */
+.auth-layout.light .auth-input-container:hover input{
+
+    /* Fundo */
+    background:#f9fafb;
+
+    /* Borda */
+    border-color:#4b5563; 
+
+}
+
+/* Campo focado */
+.auth-layout.light .auth-input-container input:focus{
+
+    /* Fundo */
+    background:#ffffff;
+
+    /* Borda */
+    border-color:#16a34a;
+
+    /* Brilho */
+    box-shadow:0 0 0 4px rgba(22,163,74,.15);
+
+}
+
+/* Ícone no tema claro */
+.auth-layout.light .auth-input-icon{
+
+    /* Cor */
+    color:#4b5563;
+
+}
+
+.auth-layout.light .auth-input label{
+
+    color:#4b5563;
+}
+
+/* ========================================= */
+/* INPUT DESABILITADO                        */
+/* ========================================= */
+
+/* Campo desabilitado */
+.auth-input-container input:disabled{
+
+    /* Cursor */
+    cursor:not-allowed;
+
+    /* Opacidade */
+    opacity:.6;
+
+}
+
+/* ========================================= */
+/* RESPONSIVIDADE                            */
+/* ========================================= */
+
+/* Tablets */
+@media(max-width:768px){
+
+    /* Campo */
+    .auth-input-container input{
+
+        /* Padding */
+        padding:14px 16px 14px 45px;
+
+    }
+
+}
+
+/* Celulares */
+@media(max-width:480px){
+
+    /* Campo */
+    .auth-input-container input{
+
+        /* Fonte */
+        font-size:14px;
+
+    }
+
+}

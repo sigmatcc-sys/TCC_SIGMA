@@ -1,0 +1,893 @@
+/* ==========================================
+   PÁGINA
+========================================== */
+
+.company-profile-page {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* ==========================================
+   TEMA ESCURO
+========================================== */
+
+.company-profile-page.dark {
+    background: #111827;
+    color: #e5e7eb;
+}
+
+
+/* ==========================================
+   TEMA CLARO
+========================================== */
+
+.company-profile-page.light {
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+
+/* ==========================================
+   SIDEBAR
+========================================== */
+
+.company-sidebar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 228px;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 100;
+
+    border-right: 1px solid;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.dark .company-sidebar {
+    background: #18202f;
+    border-color: #273244;
+}
+
+
+.light .company-sidebar {
+    background: #ffffff;
+    border-color: #e5e7eb;
+}
+
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.company-logo {
+    height: 79px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 0 18px;
+
+    border-bottom: 1px solid;
+}
+
+
+.dark .company-logo {
+    border-color: #263652;
+}
+
+
+.light .company-logo {
+    border-color: #e5e7eb;
+}
+
+
+.company-logo-icon {
+    width: 37px;
+    height: 37px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    color: #dbeafe;
+
+    background:
+        linear-gradient(
+            135deg,
+            #22c55e,
+            #179445
+        );
+}
+
+
+.company-logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.company-logo-text strong {
+    font-size: 1.08rem;
+    letter-spacing: 0.02em;
+}
+
+
+.company-logo-text span {
+    margin-top: 1px;
+
+    font-size: 0.72rem;
+
+    color: #8fa0ba;
+}
+
+
+/* ==========================================
+   MENU
+========================================== */
+
+.company-menu {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+
+    padding: 12px 10px;
+
+    flex: 1;
+}
+
+
+.company-menu-item {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 12px 15px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 0.88rem;
+    font-weight: 500;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.dark .company-menu-item {
+    color: #8fa0ba;
+}
+
+
+.light .company-menu-item {
+    color: #64748b;
+}
+
+
+.dark .company-menu-item:hover {
+    background: rgba(34, 197, 94, 0.2);
+    color: #dbeafe;
+}
+
+
+.light .company-menu-item:hover {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+
+.company-menu-item.active {
+    color: #ffffff;
+
+    background: #22c55e;
+
+    box-shadow:
+        0 5px 15px
+        rgba(34, 197, 94, 0.2);
+}
+
+
+/* ==========================================
+   FOOTER SIDEBAR
+========================================== */
+
+.company-sidebar-footer {
+    padding: 12px 10px 14px;
+
+    border-top: 1px solid;
+}
+
+
+.dark .company-sidebar-footer {
+    border-color: #263652;
+}
+
+
+.light .company-sidebar-footer {
+    border-color: #e5e7eb;
+}
+
+
+.company-logout {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 12px 15px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    color: #8fa0ba;
+
+    font-size: 0.88rem;
+}
+
+
+.company-logout:hover {
+    color: #f87171;
+
+    background:
+        rgba(239, 68, 68, 0.08);
+}
+
+
+/* ==========================================
+   CONTEÚDO
+========================================== */
+
+.company-content {
+    width: calc(100% - 228px);
+
+    min-height: 100vh;
+
+    margin-left: 228px;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.company-header {
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 28px;
+
+    border-bottom: 1px solid;
+}
+
+
+.dark .company-header {
+    background: #161f30;
+    border-color: #263652;
+}
+
+
+.light .company-header {
+    background: #ffffff;
+    border-color: #e5e7eb;
+}
+
+
+.header-spacer {
+    flex: 1;
+}
+
+
+/* ==========================================
+   HEADER ACTIONS
+========================================== */
+
+.company-header-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.theme-toggle,
+.notification-button,
+.open-menu {
+    width: 37px;
+    height: 37px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 9px;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.dark .theme-toggle,
+.dark .notification-button,
+.dark .open-menu {
+    color: #8fa0ba;
+}
+
+
+.light .theme-toggle,
+.light .notification-button,
+.light .open-menu {
+    color: #64748b;
+}
+
+
+.theme-toggle:hover,
+.notification-button:hover,
+.open-menu:hover {
+    background: rgba(59, 130, 246, 0.1);
+
+    color: #4f8ef7;
+}
+
+
+/* ==========================================
+   PERFIL HEADER
+========================================== */
+
+.company-profile-header {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    padding-left: 8px;
+
+    text-decoration: none;
+
+    color: inherit;
+}
+
+
+.company-profile-avatar {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 0.68rem;
+    font-weight: 700;
+
+    color: #6ea8ff;
+
+    background: #1b2d4b;
+
+    border: 1px solid #28446e;
+}
+
+
+.company-profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.company-profile-info strong {
+    font-size: 0.77rem;
+}
+
+
+.company-profile-info span {
+    font-size: 0.65rem;
+
+    color: #8fa0ba;
+}
+
+
+/* ==========================================
+   CONTEÚDO PRINCIPAL
+========================================== */
+
+.company-profile-main {
+    width: 100%;
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    padding: 32px 34px;
+}
+
+
+/* ==========================================
+   TÍTULO
+========================================== */
+
+.company-profile-title {
+    margin-bottom: 25px;
+}
+
+
+.company-profile-title h1 {
+    margin: 0 0 7px;
+
+    font-size: 1.45rem;
+}
+
+
+.company-profile-title p {
+    margin: 0;
+
+    font-size: 0.88rem;
+
+    color: #8fa0ba;
+}
+
+
+/* ==========================================
+   CARD
+========================================== */
+
+.company-profile-card {
+    padding: 26px;
+
+    border: 1px solid;
+
+    border-radius: 15px;
+}
+
+
+.dark .company-profile-card {
+    background: #18202f;
+    border-color: #273244;
+}
+
+
+.light .company-profile-card {
+    background: #ffffff;
+    border-color: #e5e7eb;
+}
+
+
+/* ==========================================
+   HEADER DO CARD
+========================================== */
+
+.profile-card-header {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding-bottom: 23px;
+
+    margin-bottom: 25px;
+
+    border-bottom: 1px solid;
+}
+
+
+.dark .profile-card-header {
+    border-color: #273244;
+}
+
+
+.light .profile-card-header {
+    border-color: #e5e7eb;
+}
+
+
+.profile-company-icon {
+    width: 54px;
+    height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    color: #4f8ef7;
+
+    background:
+        rgba(59, 130, 246, 0.12);
+}
+
+
+.profile-card-header h2 {
+    margin: 0 0 5px;
+
+    font-size: 1rem;
+}
+
+
+.profile-card-header p {
+    margin: 0;
+
+    font-size: 0.78rem;
+
+    color: #8fa0ba;
+}
+
+
+/* ==========================================
+   FORMULÁRIO
+========================================== */
+
+.company-profile-form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+.profile-input-group {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.profile-input-group label {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+
+.profile-input-group input {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid;
+    border-radius: 9px;
+
+    outline: none;
+
+    font-size: 0.85rem;
+
+    transition:
+        border 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.dark .profile-input-group input {
+    background: #111827;
+
+    color: #e5e7eb;
+
+    border-color: #273244;
+}
+
+
+.light .profile-input-group input {
+    background: #ffffff;
+
+    color: #1f2937;
+
+    border-color: #dbe1ea;
+}
+
+
+.profile-input-group input:focus {
+    border-color: #22c55e;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(34, 197, 94, 0.1);
+}
+
+
+/* ==========================================
+   BOTÕES
+========================================== */
+
+.profile-actions {
+    display: flex;
+    justify-content: flex-end;
+
+    gap: 12px;
+
+    margin-top: 8px;
+
+    padding-top: 22px;
+
+    border-top: 1px solid;
+}
+
+
+.dark .profile-actions {
+    border-color: #273244;
+}
+
+
+.light .profile-actions {
+    border-color: #e5e7eb;
+}
+
+
+.reset-password-button,
+.save-profile-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 11px 17px;
+
+    border-radius: 9px;
+
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+/* REDEFINIR SENHA */
+
+.reset-password-button {
+    color: #f59e0b;
+
+    background:
+        rgba(245, 158, 11, 0.08);
+
+    border: 1px solid
+        rgba(245, 158, 11, 0.25);
+}
+
+
+.reset-password-button:hover {
+    background:
+        rgba(245, 158, 11, 0.15);
+}
+
+
+/* SALVAR */
+
+.save-profile-button {
+    color: #ffffff;
+
+    background: #22c55e;
+
+    border: 1px solid #22c55e;
+}
+
+
+.save-profile-button:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 6px 15px
+        rgba(34, 197, 94, 0.2);
+}
+
+
+/* ==========================================
+   INFORMAÇÃO SOBRE SENHA
+========================================== */
+
+.password-info {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin-top: 18px;
+
+    padding: 15px 17px;
+
+    border-radius: 11px;
+
+    color: #8fa0ba;
+
+    background:
+        rgba(59, 130, 246, 0.06);
+
+    border: 1px solid
+        rgba(59, 130, 246, 0.12);
+}
+
+
+.password-info p {
+    margin: 0;
+
+    font-size: 0.78rem;
+
+    line-height: 1.5;
+}
+
+
+/* ==========================================
+   MENU MOBILE
+========================================== */
+
+.close-menu {
+    display: none;
+
+    margin-left: auto;
+
+    border: none;
+
+    background: transparent;
+
+    color: inherit;
+
+    cursor: pointer;
+}
+
+
+.open-menu {
+    display: none;
+}
+
+
+.dashboard-overlay {
+    display: none;
+}
+
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+@media (max-width: 768px) {
+
+
+    /* SIDEBAR */
+
+    .company-sidebar {
+        width: 260px;
+
+        transform:
+            translateX(-100%);
+    }
+
+
+    .company-sidebar.open {
+        transform:
+            translateX(0);
+    }
+
+
+    .close-menu {
+        display: flex;
+    }
+
+
+    /* OVERLAY */
+
+    .dashboard-overlay {
+        display: block;
+
+        position: fixed;
+
+        inset: 0;
+
+        z-index: 90;
+
+        background:
+            rgba(0, 0, 0, 0.55);
+    }
+
+
+    /* CONTEÚDO */
+
+    .company-content {
+        width: 100%;
+
+        margin-left: 0;
+    }
+
+
+    /* HEADER */
+
+    .company-header {
+        padding: 0 15px;
+    }
+
+
+    .open-menu {
+        display: flex;
+    }
+
+
+    /* MAIN */
+
+    .company-profile-main {
+        padding: 25px 18px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+
+    .company-profile-info {
+        display: none;
+    }
+
+
+    .profile-actions {
+        flex-direction: column-reverse;
+    }
+
+
+    .reset-password-button,
+    .save-profile-button {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+
+    .company-profile-card {
+        padding: 18px;
+    }
+
+
+    .profile-card-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .company-profile-title h1 {
+        font-size: 1.25rem;
+    }
+
+}

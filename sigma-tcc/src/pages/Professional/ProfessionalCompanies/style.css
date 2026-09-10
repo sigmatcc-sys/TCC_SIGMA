@@ -1,0 +1,1059 @@
+/* ==========================================
+   PROFESSIONAL COMPANIES
+========================================== */
+
+.professional-companies {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* ==========================================
+   TEMA ESCURO
+========================================== */
+
+.professional-companies.dark {
+    background: #111827;
+    color: #e5e7eb;
+}
+
+
+/* ==========================================
+   TEMA CLARO
+========================================== */
+
+.professional-companies.light {
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+
+/* ==========================================
+   SIDEBAR
+========================================== */
+
+.professional-companies-sidebar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 228px;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 100;
+
+    border-right: 1px solid;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.dark .professional-companies-sidebar {
+    background: #18202f;
+    border-color: #273244;
+}
+
+
+.light .professional-companies-sidebar {
+    background: #ffffff;
+    border-color: #e5e7eb;
+}
+
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.professional-companies-logo {
+    height: 79px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 0 18px;
+
+    border-bottom: 1px solid;
+}
+
+
+.dark .professional-companies-logo {
+    border-color: #263652;
+}
+
+
+.light .professional-companies-logo {
+    border-color: #e5e7eb;
+}
+
+
+/* ==========================================
+   LOGO ÍCONE
+========================================== */
+
+.professional-companies-logo-icon {
+    width: 37px;
+    height: 37px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 11px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #22c55e,
+            #179445
+        );
+}
+
+
+/* ==========================================
+   LOGO TEXTO
+========================================== */
+
+.professional-companies-logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.professional-companies-logo-text strong {
+    font-size: 1.08rem;
+
+    letter-spacing: 0.02em;
+}
+
+
+.professional-companies-logo-text span {
+    margin-top: 1px;
+
+    font-size: 0.72rem;
+
+    color: #8fa0ba;
+}
+
+
+/* ==========================================
+   MENU
+========================================== */
+
+.professional-companies-menu {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+
+    padding: 12px 10px;
+
+    flex: 1;
+}
+
+
+.professional-companies-menu-item {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 12px 15px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 0.88rem;
+    font-weight: 500;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+/* DARK */
+
+.dark .professional-companies-menu-item {
+    color: #8fa0ba;
+}
+
+
+/* LIGHT */
+
+.light .professional-companies-menu-item {
+    color: #64748b;
+}
+
+
+/* HOVER */
+
+.dark .professional-companies-menu-item:hover {
+    background:
+        rgba(34, 197, 94, 0.2);
+
+    color: #dbeafe;
+}
+
+
+.light .professional-companies-menu-item:hover {
+    background: #eff6ff;
+
+    color: #2563eb;
+}
+
+
+/* ATIVO */
+
+.professional-companies-menu-item.active {
+    color: #ffffff;
+
+    background: #22c55e;
+
+    box-shadow:
+        0 5px 15px
+        rgba(34, 197, 94, 0.2);
+}
+
+.professional-companies-menu-item.active:hover{
+    color: #ffffff;
+
+    background: #22c55e;
+
+    box-shadow:
+        0 5px 15px
+        rgba(34, 197, 94, 0.2);
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.professional-companies-sidebar-footer {
+    padding: 12px 10px 14px;
+
+    border-top: 1px solid;
+}
+
+
+.dark .professional-companies-sidebar-footer {
+    border-color: #263652;
+}
+
+
+.light .professional-companies-sidebar-footer {
+    border-color: #e5e7eb;
+}
+
+
+/* ==========================================
+   LOGOUT
+========================================== */
+
+.professional-companies-logout {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 12px 15px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    color: #8fa0ba;
+
+    font-size: 0.88rem;
+
+    transition: 0.2s;
+}
+
+
+.professional-companies-logout:hover {
+    color: #f87171;
+
+    background:
+        rgba(239, 68, 68, 0.08);
+}
+
+
+/* ==========================================
+   CONTEÚDO
+========================================== */
+
+.professional-companies-content {
+    width: calc(100% - 228px);
+
+    min-height: 100vh;
+
+    margin-left: 228px;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.professional-companies-header {
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 28px;
+
+    border-bottom: 1px solid;
+}
+
+
+.dark .professional-companies-header {
+    background: #161f30;
+    border-color: #263652;
+}
+
+
+.light .professional-companies-header {
+    background: #ffffff;
+    border-color: #e5e7eb;
+}
+
+
+.professional-companies-header-spacer {
+    flex: 1;
+}
+
+
+.professional-companies-header-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+/* ==========================================
+   BOTÕES HEADER
+========================================== */
+
+.professional-companies-theme-toggle,
+.professional-companies-notification,
+.professional-companies-open-menu {
+    width: 37px;
+    height: 37px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 9px;
+
+    background: transparent;
+
+    color: #8fa0ba;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.light .professional-companies-theme-toggle,
+.light .professional-companies-notification,
+.light .professional-companies-open-menu {
+    color: #64748b;
+}
+
+
+.professional-companies-theme-toggle:hover,
+.professional-companies-notification:hover,
+.professional-companies-open-menu:hover {
+    background:
+        rgba(34, 197, 94, 0.1);
+
+    color: #22c55e;
+}
+
+
+/* ==========================================
+   NOTIFICAÇÃO
+========================================== */
+
+.professional-companies-notification {
+    position: relative;
+}
+
+
+.professional-companies-notification-indicator {
+    position: absolute;
+
+    top: 7px;
+    right: 7px;
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #22c55e;
+}
+
+
+/* ==========================================
+   PERFIL
+========================================== */
+
+.professional-companies-profile {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    padding-left: 8px;
+}
+
+
+.professional-companies-avatar {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #22c55e;
+
+    background:
+        rgba(34, 197, 94, 0.12);
+
+    border: 1px solid
+        rgba(34, 197, 94, 0.25);
+
+    font-size: 0.68rem;
+    font-weight: 700;
+}
+
+
+.professional-companies-profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.professional-companies-profile-info strong {
+    font-size: 0.77rem;
+}
+
+
+.professional-companies-profile-info span {
+    margin-top: 1px;
+
+    font-size: 0.65rem;
+
+    color: #8fa0ba;
+}
+
+
+/* ==========================================
+   MAIN
+========================================== */
+
+.professional-companies-main {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 24px 34px 40px;
+}
+
+
+/* ==========================================
+   TÍTULO
+========================================== */
+
+.professional-companies-title {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    margin-bottom: 20px;
+}
+
+
+.professional-companies-title svg {
+    color: #22c55e;
+}
+
+
+.professional-companies-title h1 {
+    margin: 0;
+
+    font-size: 1.28rem;
+
+    font-weight: 700;
+}
+
+
+/* ==========================================
+   PESQUISA
+========================================== */
+
+.professional-companies-search {
+    width: 100%;
+    height: 37px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 0 12px;
+
+    margin-bottom: 18px;
+
+    border: 1px solid;
+
+    border-radius: 9px;
+}
+
+
+.dark .professional-companies-search {
+    background: #18202f;
+    border-color: #273244;
+}
+
+
+.light .professional-companies-search {
+    background: #ffffff;
+    border-color: #dbe1ea;
+}
+
+
+.professional-companies-search svg {
+    flex-shrink: 0;
+
+    color: #8fa0ba;
+}
+
+
+.professional-companies-search input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: inherit;
+
+    font-family: inherit;
+
+    font-size: 0.76rem;
+}
+
+
+.professional-companies-search input::placeholder {
+    color: #71819a;
+}
+
+
+/* ==========================================
+   GRID
+========================================== */
+
+.professional-companies-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 14px;
+}
+
+
+/* ==========================================
+   CARD
+========================================== */
+
+.professional-company-card {
+    min-height: 220px;
+
+    display: flex;
+
+    overflow: hidden;
+
+    border: 1px solid;
+
+    border-radius: 12px;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.dark .professional-company-card {
+    background: #18202f;
+    border-color: #273244;
+}
+
+
+.light .professional-company-card {
+    background: #ffffff;
+    border-color: #e5e7eb;
+}
+
+
+.professional-company-card:hover {
+    transform: translateY(-2px);
+
+    border-color: #22c55e;
+
+    box-shadow:
+        0 8px 20px
+        rgba(0, 0, 0, 0.12);
+}
+
+
+/* ==========================================
+   IMAGEM
+========================================== */
+
+.professional-company-image {
+    width: 115px;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+}
+
+
+.professional-company-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.3s ease;
+}
+
+
+.professional-company-card:hover
+.professional-company-image img {
+    transform: scale(1.04);
+}
+
+
+/* ==========================================
+   INFORMAÇÕES
+========================================== */
+
+.professional-company-info {
+    flex: 1;
+
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 14px 14px 13px;
+}
+
+
+/* ==========================================
+   CATEGORIA
+========================================== */
+
+.professional-company-category {
+    align-self: flex-start;
+
+    margin-bottom: 6px;
+
+    padding: 4px 9px;
+
+    border-radius: 20px;
+
+    color: #dbeafe;
+
+    background:
+        rgba(34, 197, 94, 0.08);
+
+    font-size: 0.62rem;
+
+    font-weight: 600;
+}
+
+
+/* ==========================================
+   NOME
+========================================== */
+
+.professional-company-info h2 {
+    margin: 0 0 4px;
+
+    font-size: 0.86rem;
+
+    font-weight: 700;
+}
+
+
+/* ==========================================
+   DESCRIÇÃO
+========================================== */
+
+.professional-company-description {
+    margin: 0 0 9px;
+
+    display: -webkit-box;
+
+    overflow: hidden;
+
+    
+    -webkit-box-orient: vertical;
+
+    color: #8fa0ba;
+
+    font-size: 0.67rem;
+
+    line-height: 1.4;
+}
+
+
+/* ==========================================
+   DETALHES
+========================================== */
+
+.professional-company-detail {
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+
+    margin-bottom: 4px;
+
+    color: #8fa0ba;
+
+    font-size: 0.62rem;
+}
+
+
+.professional-company-detail svg {
+    flex-shrink: 0;
+
+    color: #7890b2;
+}
+
+
+/* ==========================================
+   PREÇO
+========================================== */
+
+.professional-company-price {
+    margin-top: 3px;
+    margin-bottom: 9px;
+
+    color: #22c55e;
+
+    font-size: 0.67rem;
+
+    font-weight: 600;
+}
+
+
+/* ==========================================
+   BOTÃO CONTATO
+========================================== */
+
+.professional-company-contact {
+    width: 100%;
+
+    min-height: 29px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    margin-top: auto;
+
+    border: none;
+    border-radius: 8px;
+
+    color: #ffffff;
+
+    background: #22c55e;
+
+    font-family: inherit;
+
+    font-size: 0.67rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.professional-company-contact:hover {
+    transform: translateY(-1px);
+
+    background: #16a34a;
+
+    box-shadow:
+        0 5px 12px
+        rgba(34, 197, 94, 0.2);
+}
+
+
+/* ==========================================
+   EMPTY
+========================================== */
+
+.professional-companies-empty {
+    grid-column: 1 / -1;
+
+    min-height: 220px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    border: 1px dashed #273244;
+
+    border-radius: 12px;
+
+    color: #8fa0ba;
+
+    text-align: center;
+}
+
+
+.professional-companies-empty svg {
+    color: #22c55e;
+}
+
+
+.professional-companies-empty strong {
+    color: inherit;
+
+    font-size: 0.85rem;
+}
+
+
+.professional-companies-empty p {
+    margin: 0;
+
+    font-size: 0.7rem;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+.professional-companies-open-menu {
+    display: none;
+}
+
+
+.professional-companies-close-menu {
+    display: none;
+
+    margin-left: auto;
+
+    border: none;
+
+    background: transparent;
+
+    color: inherit;
+
+    cursor: pointer;
+}
+
+
+.professional-companies-overlay {
+    display: none;
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+
+    .professional-companies-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+    .professional-companies-sidebar {
+        width: 260px;
+
+        transform:
+            translateX(-100%);
+    }
+
+
+    .professional-companies-sidebar.open {
+        transform:
+            translateX(0);
+    }
+
+
+    .professional-companies-close-menu {
+        display: flex;
+    }
+
+
+    .professional-companies-overlay {
+        display: block;
+
+        position: fixed;
+
+        inset: 0;
+
+        z-index: 90;
+
+        background:
+            rgba(0, 0, 0, 0.55);
+    }
+
+
+    .professional-companies-content {
+        width: 100%;
+
+        margin-left: 0;
+    }
+
+
+    .professional-companies-header {
+        padding: 0 15px;
+    }
+
+
+    .professional-companies-open-menu {
+        display: flex;
+    }
+
+
+    .professional-companies-main {
+        padding: 20px 18px 35px;
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE PEQUENO
+========================================== */
+
+@media (max-width: 550px) {
+
+    .professional-companies-profile-info {
+        display: none;
+    }
+
+
+    .professional-companies-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .professional-company-card {
+        min-height: 190px;
+    }
+
+
+    .professional-company-image {
+        width: 95px;
+    }
+
+
+    .professional-company-info {
+        padding: 11px;
+    }
+
+
+    .professional-company-description {
+        font-size: 0.63rem;
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE MUITO PEQUENO
+========================================== */
+
+@media (max-width: 420px) {
+
+    .professional-companies-title h1 {
+        font-size: 1.1rem;
+    }
+
+
+    .professional-company-image {
+        width: 85px;
+    }
+
+
+    .professional-company-detail {
+        font-size: 0.58rem;
+    }
+
+
+    .professional-company-price {
+        font-size: 0.62rem;
+    }
+
+
+    .professional-company-contact {
+        font-size: 0.62rem;
+    }
+
+}

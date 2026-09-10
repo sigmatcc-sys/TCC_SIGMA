@@ -1,0 +1,217 @@
+
+/* =========================
+   Página
+========================= */
+
+.auth-choice-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  transition: 0.3s;
+}
+
+/* Tema Claro */
+
+.auth-choice-page.light {
+  background: #f5f7fa;
+  color: #1f2937;
+}
+
+/* Tema Escuro */
+
+.auth-choice-page.dark {
+  background: #111827;
+  color: #f9fafb;
+}
+
+/* =========================
+   Container
+========================= */
+
+.auth-choice-container {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 24px;
+  padding: 3rem;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.light .auth-choice-container {
+  background: #ffffff;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  color: #111827;
+  border:1px solid #000000;
+}
+
+.dark .auth-choice-container {
+  background: #1f2937;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
+  border:1px solid rgba(255,255,255,.15);
+}
+
+/* =========================
+   Logo
+========================= */
+
+.auth-choice-logo h1 {
+  font-size: 2.3rem;
+  color: #16a34a;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+/* =========================
+   Cabeçalho
+========================= */
+
+.auth-choice-page.light .auth-choice-header h2{
+    color: #000000;
+}
+
+.auth-choice-header h2 {
+  font-size: 1.9rem;
+  margin-bottom: 0.8rem;
+}
+
+.auth-choice-page.light .auth-choice-header p{
+    color: #000000;
+}
+
+.auth-choice-header p {
+  line-height: 1.6;
+  opacity: 0.8;
+  margin-bottom: 2.5rem;
+}
+
+/* =========================
+   Cards
+========================= */
+
+.auth-choice-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.choice-card {
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+
+  text-decoration: none;
+
+  padding: 1.3rem 1.5rem;
+
+  border-radius: 18px;
+
+  transition: all .25s ease;
+}
+
+.auth-choice-page.light .choice-card {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  color: #1f2937;
+  border:1px solid #9ca3af;
+}
+
+.auth-choice-page.light .arrow{
+    stroke: #16a34a;
+}
+
+.auth-choice-page.light .choice-card h3{
+
+  color: #4b5563;
+}
+
+.auth-choice-page.light .choice-card span{
+
+  color: #4b5563;
+}
+
+
+.dark .choice-card {
+  background: #374151;
+  border: 1px solid #4b5563;
+  color: #f9fafb;
+}
+
+.choice-card svg {
+  stroke: #16a34a;
+  flex-shrink: 0;
+}
+
+.choice-card div {
+  text-align: left;
+}
+
+.choice-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: .25rem;
+}
+
+.choice-card span {
+  font-size: .92rem;
+  opacity: .75;
+}
+
+.choice-card:hover {
+  transform: translateY(-4px);
+  border-color: #16a34a;
+  box-shadow: 0 10px 30px rgba(22, 163, 74, .18);
+}
+
+/* =========================
+   Link voltar
+========================= */
+
+.auth-choice-page.light .back-link {
+  color: #16a34a;
+}
+
+.back-link {
+  margin-top: 2.5rem;
+
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+
+  text-decoration: none;
+
+  color: #16a34a;
+
+  font-weight: 600;
+
+  transition: .2s;
+}
+
+.back-link:hover {
+  gap: .8rem;
+}
+
+/* =========================
+   Responsividade
+========================= */
+
+@media (max-width: 600px) {
+
+  .auth-choice-page {
+    padding: 1rem;
+  }
+
+  .auth-choice-container {
+    padding: 2rem;
+  }
+
+  .auth-choice-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .choice-card {
+    padding: 1.1rem;
+  }
+
+}
+

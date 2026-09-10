@@ -1,0 +1,296 @@
+/* Container principal */
+.auth-layout{
+
+    /* Ocupa toda a altura da tela */
+    min-height:100vh;
+
+    /* Centraliza horizontalmente */
+    display:flex;
+
+    /* Centraliza verticalmente */
+    justify-content:center;
+
+    /* Centraliza horizontalmente */
+    align-items:center;
+
+    /* Espaçamento interno */
+    padding:40px;
+
+    /* Suaviza mudanças */
+    transition:.3s;
+
+}
+
+/* Tema escuro */
+.auth-layout.dark{
+
+    /* Fundo em degradê */
+    background:linear-gradient(135deg,#0f172a,#1e293b,#0f172a);
+
+}
+
+/* Tema claro */
+.auth-layout.light{
+
+    /* Fundo em degradê */
+    background:linear-gradient(135deg,#f5f7fa,#edf2f7,#f8fafc);
+
+}
+
+/* Card principal */
+.auth-card{
+
+    /* Largura total */
+    width:100%;
+
+    /* Limita o tamanho */
+    max-width:470px;
+
+    /* Espaçamento interno */
+    padding:40px;
+
+    /* Bordas arredondadas */
+    border-radius:25px;
+
+    /* Fundo translúcido */
+    background:rgba(255,255,255,.08);
+
+    /* Borda */
+    border:1px solid rgba(255,255,255,.15);
+
+    /* Efeito glassmorphism */
+    backdrop-filter:blur(18px);
+
+    /* Sombra */
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+
+    /* Suaviza transições */
+    transition:.3s;
+
+    /* Animação de entrada */
+    animation:fadeIn .6s ease;
+
+}
+
+/* Card no tema claro */
+.auth-layout.light .auth-card{
+
+    /* Fundo branco */
+    background:#ffffff;
+
+    /* Borda */
+    border:1px solid #000000;
+
+    /* Sombra */
+    box-shadow:0 15px 40px rgba(0,0,0,.10);
+
+}
+
+/* Cabeçalho */
+.auth-header{
+
+    /* Centraliza conteúdo */
+    text-align:center;
+
+    /* Espaço inferior */
+    margin-bottom:35px;
+
+}
+
+/* Container do ícone */
+.auth-icon{
+
+    /* Largura */
+    width:75px;
+
+    /* Altura */
+    height:75px;
+
+    /* Centraliza */
+    margin:auto;
+
+    /* Espaço inferior */
+    margin-bottom:20px;
+
+    /* Fundo */
+    background:#16a34a;
+
+    /* Bordas arredondadas */
+    border-radius:20px;
+
+    /* Flex */
+    display:flex;
+
+    /* Centraliza horizontalmente */
+    justify-content:center;
+
+    /* Centraliza verticalmente */
+    align-items:center;
+
+    /* Cor do ícone */
+    color:rgb(0, 0, 0);
+
+    /* Brilho */
+    box-shadow:0 0 30px rgba(22,163,74,.40);
+
+}
+
+/* Título */
+.auth-header h1{
+
+    /* Tamanho */
+    font-size:32px;
+
+    /* Peso */
+    font-weight:700;
+
+    /* Cor */
+    color:white;
+
+    /* Espaço inferior */
+    margin-bottom:12px;
+
+}
+
+/* Título no tema claro */
+.auth-layout.light .auth-header h1{
+
+    /* Cor */
+    color:#111827;
+
+}
+
+/* Subtítulo */
+.auth-header p{
+
+    /* Cor */
+    color:#cbd5e1;
+
+    /* Altura da linha */
+    line-height:1.6;
+
+    /* Tamanho */
+    font-size:16px;
+
+}
+
+/* Subtítulo no tema claro */
+.auth-layout.light .auth-header p{
+
+    /* Cor */
+    color:#4b5563;
+
+}
+
+/* Área onde o formulário será renderizado */
+.auth-content{
+
+    /* Ocupa toda a largura */
+    width:100%;
+
+}
+
+/* Hover do card */
+.auth-card:hover{
+
+    /* Levanta levemente */
+    transform:translateY(-4px);
+
+}
+
+/* Animação de entrada */
+@keyframes fadeIn{
+
+    /* Estado inicial */
+    from{
+
+        /* Invisível */
+        opacity:0;
+
+        /* Abaixo da posição final */
+        transform:translateY(30px);
+
+    }
+
+    /* Estado final */
+    to{
+
+        /* Visível */
+        opacity:1;
+
+        /* Posição normal */
+        transform:translateY(0);
+
+    }
+
+}
+
+/* Responsividade tablet */
+@media(max-width:768px){
+
+    /* Card */
+    .auth-card{
+
+        /* Reduz o padding */
+        padding:30px;
+
+    }
+
+    /* Título */
+    .auth-header h1{
+
+        /* Reduz o tamanho */
+        font-size:28px;
+
+    }
+
+}
+
+/* Responsividade celular */
+@media(max-width:480px){
+
+    /* Layout */
+    .auth-layout{
+
+        /* Reduz o espaçamento */
+        padding:20px;
+
+    }
+
+    /* Card */
+    .auth-card{
+
+        /* Reduz o padding */
+        padding:25px;
+
+    }
+
+    /* Ícone */
+    .auth-icon{
+
+        /* Largura */
+        width:65px;
+
+        /* Altura */
+        height:65px;
+        
+
+    }
+
+    /* Título */
+    .auth-header h1{
+
+        /* Novo tamanho */
+        font-size:24px;
+
+    }
+
+    /* Subtítulo */
+    .auth-header p{
+
+        /* Novo tamanho */
+        font-size:15px;
+
+    }
+
+}

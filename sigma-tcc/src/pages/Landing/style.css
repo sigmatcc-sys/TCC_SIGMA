@@ -1,0 +1,278 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: sans-serif;
+    color:#fff;
+}
+
+body{
+    font-family: Inter;
+}
+
+.landing{
+    min-height:100vh;
+
+    background:linear-gradient(135deg,#0f172a,#1e293b,#0f172a);
+
+    color:#fff;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px 20px;
+}
+
+.hero{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:18px;
+
+    margin-bottom:20px;
+}
+
+.logo h1{
+    font-size:56px;
+    font-weight:700;
+}
+
+.logo-icon{
+
+    width:65px;
+    height:65px;
+
+    background:#16a34a;
+
+    border-radius:18px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:0 0 20px rgba(22,163,74,.4);
+
+}
+
+.hero p{
+
+    color:#cbd5e1;
+
+    max-width:520px;
+
+    margin:auto;
+
+    font-size:18px;
+
+    line-height:1.6;
+
+}
+
+.cards{
+
+    width:100%;
+    max-width:1200px;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    gap:25px;
+
+}
+
+.card-link{
+
+    text-decoration:none;
+
+}
+
+.card{
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.1);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:22px;
+
+    padding:30px;
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    background:rgba(255,255,255,.1);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+.icon{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:16px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    margin-bottom:20px;
+
+}
+
+.management{
+    background:linear-gradient(135deg,#7c3aed,#9333ea);
+    
+}
+
+.company{
+    background:linear-gradient(135deg,#3b82f6,#06b6d4);
+}
+
+.professional{
+    background:linear-gradient(135deg,#10b981,#14b8a6);
+}
+
+.user{
+    background:linear-gradient(135deg,#f97316,#f59e0b);
+}
+
+.card h2{
+
+    margin-bottom:12px;
+
+    font-size:23px;
+
+}
+
+.card p{
+
+    color:#fff;
+
+    line-height:1.6;
+
+}
+
+.badge{
+
+    display:inline-block;
+
+    margin-top:18px;
+
+    padding:8px 15px;
+
+    border-radius:50px;
+
+    background:#6d28d9;
+
+    font-size:13px;
+
+}
+
+footer{
+
+    margin-top:70px;
+
+    color:#94a3b8;
+
+    font-size:14px;
+
+}
+
+@media(max-width:768px){
+
+.logo h1{
+
+    font-size:42px;
+
+}
+
+.hero{
+
+    margin-bottom:50px;
+
+}
+
+}
+
+/* ========================= */
+/* TEMA CLARO                */
+/* ========================= */
+
+.landing.light{
+
+    background:linear-gradient(135deg,#f5f7fa,#edf2f7,#f5f7fa);
+
+}
+
+.landing.light h1{
+
+    color:#111827;
+
+}
+
+.landing.light .hero p{
+
+    color:#4b5563;
+
+}
+
+.landing.light footer{
+
+    color:#6b7280;
+
+}
+
+.landing.light .card{
+
+    background:white;
+
+    border:1px solid #e5e7eb;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.landing.light .card:hover{
+
+    background:#fafafa;
+
+}
+
+.landing.light .card h2{
+
+    color:#111827;
+
+}
+
+.landing.light .card p{
+
+    color:#4b5563;
+
+}
+
+.landing.light .badge{
+
+    color:white;
+
+}

@@ -1,0 +1,295 @@
+/* ==========================================
+   Página
+========================================== */
+
+.auth-register-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  transition: background .3s ease;
+}
+
+/* Tema Claro */
+
+.auth-register-page.light {
+  background: #f4f6f8;
+}
+
+/* Tema Escuro */
+
+.auth-register-page.dark {
+  background: #111827;
+}
+
+/* ==========================================
+   Card
+========================================== */
+
+.auth-register-card {
+  width: 100%;
+  max-width: 520px;
+
+  padding: 2.5rem;
+
+  border-radius: 24px;
+
+  transition: .3s;
+}
+
+.light .auth-register-card {
+  background: #ffffff;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, .08);
+  border: 1px solid #000;
+}
+
+.dark .auth-register-card {
+  background: #1f2937;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, .35);
+}
+
+/* ==========================================
+   Voltar
+========================================== */
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+
+  margin-bottom: 2rem;
+
+  text-decoration: none;
+
+  font-size: .95rem;
+  font-weight: 500;
+
+  transition: .2s;
+}
+
+.light .back-button {
+  color: #6b7280;
+}
+
+.dark .back-button {
+  color: #9ca3af;
+}
+
+.back-button:hover {
+  color: #22c55e;
+  gap: .8rem;
+}
+
+/* ==========================================
+   Cabeçalho
+========================================== */
+
+.auth-register-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.icon-box {
+  width: 72px;
+  height: 72px;
+
+  margin: 0 auto 1.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 18px;
+
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+
+  color: #fff;
+
+  box-shadow: 0 10px 25px rgba(34,197,94,.35);
+}
+
+.auth-register-header h1 {
+  font-size: 2rem;
+  margin-bottom: .4rem;
+}
+
+.light .auth-register-header h1 {
+  color: #111827;
+}
+
+.dark .auth-register-header h1 {
+  color: white;
+}
+
+.auth-register-header p {
+  font-size: .95rem;
+}
+
+.light .auth-register-header p {
+  color: #6b7280;
+}
+
+.dark .auth-register-header p {
+  color: #9ca3af;
+}
+
+/* ==========================================
+   Formulário
+========================================== */
+
+.auth-register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  margin-bottom: 2rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: .45rem;
+}
+
+.input-group label {
+  font-weight: 600;
+  font-size: .95rem;
+  text-align: left;
+}
+
+.light .input-group label {
+  color: #374151;
+}
+
+.dark .input-group label {
+  color: #e5e7eb;
+}
+
+.input-group input {
+  width: 100%;
+
+  padding: .9rem 1rem;
+
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+
+  outline: none;
+
+  font-size: .95rem;
+
+  transition: .2s;
+}
+
+.light .input-group input {
+  background: white;
+  color: #111827;
+}
+
+.dark .input-group input {
+  background: #374151;
+  color: white;
+  border-color: #4b5563;
+}
+
+.input-group input:focus {
+  border-color: #22c55e;
+  box-shadow: 0 0 0 3px rgba(34,197,94,.18);
+}
+
+/* ==========================================
+   Botão
+========================================== */
+
+.register-button {
+  margin-top: .5rem;
+
+  width: 100%;
+
+  padding: 1rem;
+
+  border: none;
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  background: #22c55e;
+  color: white;
+
+  transition: .25s;
+}
+
+.register-button:hover {
+  background: #16a34a;
+}
+
+/* ==========================================
+   Rodapé
+========================================== */
+
+.auth-register-footer {
+  text-align: center;
+}
+
+.auth-register-footer p {
+  margin-bottom: .6rem;
+}
+
+.light .auth-register-footer p {
+  color: #6b7280;
+}
+
+.dark .auth-register-footer p {
+  color: #9ca3af;
+}
+
+.auth-register-footer a {
+  color: #22c55e;
+  text-decoration: none;
+  font-weight: 600;
+  transition: .2s;
+}
+
+.auth-register-footer a:hover {
+  color: #16a34a;
+}
+
+/* ==========================================
+   Responsividade
+========================================== */
+
+@media (max-width: 768px) {
+
+  .auth-register-page {
+    padding: 1rem;
+  }
+
+  .auth-register-card {
+    padding: 2rem;
+  }
+
+  .auth-register-header h1 {
+    font-size: 1.7rem;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .auth-register-card {
+    padding: 1.6rem;
+  }
+
+  .icon-box {
+    width: 64px;
+    height: 64px;
+  }
+
+  .auth-register-header h1 {
+    font-size: 1.5rem;
+  }
+
+}

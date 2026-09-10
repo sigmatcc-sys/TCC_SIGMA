@@ -1,0 +1,351 @@
+/* ==========================================
+   EDIT MODAL
+========================================== */
+
+.edit-modal-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background:
+        rgba(0, 0, 0, 0.6);
+
+    backdrop-filter: blur(3px);
+}
+
+
+/* ==========================================
+   CAIXA
+========================================== */
+
+.edit-modal {
+    width: 100%;
+    max-width: 440px;
+
+    padding: 24px;
+
+    border: 1px solid;
+
+    border-radius: 14px;
+
+    background: #101827;
+
+    border-color: #243858;
+
+    color: #e5e7eb;
+
+    box-shadow:
+        0 20px 50px
+        rgba(0, 0, 0, 0.35);
+
+    animation:
+        editModalIn 0.2s ease;
+}
+
+
+/* ==========================================
+   CABEÇALHO
+========================================== */
+
+.edit-modal-header {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 22px;
+}
+
+
+/* ==========================================
+   ÍCONE
+========================================== */
+
+.edit-modal-icon {
+    width: 43px;
+    height: 43px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    color: #8b5cf6;
+
+    background:
+        rgba(124, 58, 237, 0.12);
+}
+
+
+/* ==========================================
+   TÍTULO
+========================================== */
+
+.edit-modal-header h2 {
+    margin: 0 0 4px;
+
+    font-size: 1rem;
+
+    font-weight: 700;
+}
+
+
+.edit-modal-header p {
+    margin: 0;
+
+    color: #8fa0ba;
+
+    font-size: 0.72rem;
+}
+
+
+/* ==========================================
+   FECHAR
+========================================== */
+
+.edit-modal-close {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: auto;
+
+    border: none;
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: #8fa0ba;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.edit-modal-close:hover {
+    color: #f87171;
+
+    background:
+        rgba(239, 68, 68, 0.08);
+}
+
+
+/* ==========================================
+   FORMULÁRIO
+========================================== */
+
+.edit-modal-form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+
+/* ==========================================
+   CAMPO
+========================================== */
+
+.edit-modal-field {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+
+.edit-modal-field label {
+    font-size: 0.72rem;
+
+    font-weight: 600;
+
+    color: #cbd5e1;
+}
+
+
+.edit-modal-field input {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 10px 12px;
+
+    border: 1px solid #29415f;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #0d1524;
+
+    color: #e5e7eb;
+
+    font-family: inherit;
+
+    font-size: 0.75rem;
+
+    transition:
+        border 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.edit-modal-field input:focus {
+    border-color: #8b5cf6;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(124, 58, 237, 0.1);
+}
+
+
+/* ==========================================
+   AÇÕES
+========================================== */
+
+.edit-modal-actions {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 9px;
+
+    margin-top: 9px;
+}
+
+
+/* ==========================================
+   CANCELAR
+========================================== */
+
+.edit-modal-cancel,
+.edit-modal-save {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 9px 14px;
+
+    border-radius: 8px;
+
+    font-family: inherit;
+
+    font-size: 0.73rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.edit-modal-cancel {
+    border: 1px solid #243858;
+
+    background: transparent;
+
+    color: #94a3b8;
+}
+
+
+.edit-modal-cancel:hover {
+    background:
+        rgba(148, 163, 184, 0.08);
+
+    color: #e5e7eb;
+}
+
+
+/* ==========================================
+   SALVAR
+========================================== */
+
+.edit-modal-save {
+    border: none;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed,
+            #9333ea
+        );
+
+    color: #ffffff;
+}
+
+
+.edit-modal-save:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 14px
+        rgba(124, 58, 237, 0.25);
+}
+
+
+/* ==========================================
+   ANIMAÇÃO
+========================================== */
+
+@keyframes editModalIn {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(8px)
+            scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 500px) {
+
+    .edit-modal {
+        padding: 20px;
+    }
+
+
+    .edit-modal-actions {
+        flex-direction: column-reverse;
+    }
+
+
+    .edit-modal-cancel,
+    .edit-modal-save {
+        width: 100%;
+    }
+
+}

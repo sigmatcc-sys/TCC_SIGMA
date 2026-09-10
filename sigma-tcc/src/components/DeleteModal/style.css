@@ -1,0 +1,245 @@
+/* ==========================================
+   DELETE MODAL
+========================================== */
+
+.delete-modal-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background:
+        rgba(0, 0, 0, 0.6);
+
+    backdrop-filter: blur(3px);
+}
+
+
+/* ==========================================
+   CAIXA
+========================================== */
+
+.delete-modal {
+    width: 100%;
+    max-width: 390px;
+
+    padding: 25px;
+
+    border-radius: 14px;
+
+    border: 1px solid;
+
+    box-shadow:
+        0 20px 50px
+        rgba(0, 0, 0, 0.35);
+
+    animation:
+        deleteModalIn 0.2s ease;
+}
+
+
+/* ==========================================
+   DARK
+========================================== */
+
+.delete-modal-overlay
+.delete-modal {
+    background: #101827;
+    border-color: #243858;
+    color: #e5e7eb;
+}
+
+
+/* ==========================================
+   ÍCONE
+========================================== */
+
+.delete-modal-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 16px;
+
+    border-radius: 12px;
+
+    color: #ef4444;
+
+    background:
+        rgba(239, 68, 68, 0.12);
+}
+
+
+/* ==========================================
+   CONTEÚDO
+========================================== */
+
+.delete-modal-content h2 {
+    margin: 0 0 7px;
+
+    font-size: 1rem;
+
+    font-weight: 700;
+}
+
+
+.delete-modal-content p {
+    margin: 0;
+
+    color: #8fa0ba;
+
+    font-size: 0.78rem;
+
+    line-height: 1.5;
+}
+
+
+/* ==========================================
+   AÇÕES
+========================================== */
+
+.delete-modal-actions {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 9px;
+
+    margin-top: 23px;
+}
+
+
+/* ==========================================
+   BOTÕES
+========================================== */
+
+.delete-modal-cancel,
+.delete-modal-confirm {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 9px 14px;
+
+    border-radius: 8px;
+
+    font-family: inherit;
+
+    font-size: 0.75rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* ==========================================
+   CANCELAR
+========================================== */
+
+.delete-modal-cancel {
+    border: 1px solid #243858;
+
+    background: transparent;
+
+    color: #94a3b8;
+}
+
+
+.delete-modal-cancel:hover {
+    background:
+        rgba(148, 163, 184, 0.08);
+
+    color: #e5e7eb;
+}
+
+
+/* ==========================================
+   EXCLUIR
+========================================== */
+
+.delete-modal-confirm {
+    border: none;
+
+    background: #dc2626;
+
+    color: #ffffff;
+}
+
+
+.delete-modal-confirm:hover {
+    background: #ef4444;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 14px
+        rgba(239, 68, 68, 0.2);
+}
+
+
+/* ==========================================
+   ANIMAÇÃO
+========================================== */
+
+@keyframes deleteModalIn {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(8px)
+            scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+@media (max-width: 450px) {
+
+    .delete-modal {
+        padding: 21px;
+    }
+
+
+    .delete-modal-actions {
+        flex-direction: column-reverse;
+    }
+
+
+    .delete-modal-cancel,
+    .delete-modal-confirm {
+        width: 100%;
+    }
+
+}

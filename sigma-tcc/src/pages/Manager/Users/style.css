@@ -1,0 +1,916 @@
+/* ==========================================
+   MANAGER USERS
+========================================== */
+
+.manager-users {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* ==========================================
+   TEMA ESCURO
+========================================== */
+
+.manager-users.dark {
+    background: #111827;
+    border-color: #273244;
+    color: #e5e7eb;
+}
+
+
+/* ==========================================
+   TEMA CLARO
+========================================== */
+
+.manager-users.light {
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+
+/* ==========================================
+   SIDEBAR
+========================================== */
+
+.manager-users-sidebar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 228px;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 100;
+
+    border-right: 1px solid;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.dark .manager-users-sidebar {
+    background: #18202f;
+    border-color: #273244;
+}
+
+
+.light .manager-users-sidebar {
+    background: #ffffff;
+    border-color: #e5e7eb;
+}
+
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.manager-users-logo {
+    height: 79px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 0 18px;
+
+    border-bottom: 1px solid;
+}
+
+
+.dark .manager-users-logo {
+    border-color: #1d2b43;
+}
+
+
+.light .manager-users-logo {
+    border-color: #e5e7eb;
+}
+
+
+.manager-users-logo-icon {
+    width: 37px;
+    height: 37px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed,
+            #9333ea
+        );
+}
+
+
+.manager-users-logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.manager-users-logo-text strong {
+    font-size: 1.08rem;
+
+    letter-spacing: 0.02em;
+}
+
+
+.manager-users-logo-text span {
+    margin-top: 1px;
+
+    font-size: 0.78rem;
+
+    color: #8fa0ba;
+}
+
+
+/* ==========================================
+   MENU
+========================================== */
+
+.manager-users-menu {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+
+    padding: 12px 10px;
+
+    flex: 1;
+}
+
+
+.manager-users-menu-item {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 12px 15px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 0.88rem;
+    font-weight: 500;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.dark .manager-users-menu-item {
+    color: #94a3b8;
+}
+
+
+.light .manager-users-menu-item {
+    color: #64748b;
+}
+
+
+.dark .manager-users-menu-item:hover {
+    background:
+        rgba(139, 61, 240, 0.12);
+
+    color: #d8c7ff;
+}
+
+
+.light .manager-users-menu-item:hover {
+    background: #f2edff;
+
+    color: #7c3aed;
+}
+
+
+/* ==========================================
+   ITEM ATIVO
+========================================== */
+
+.manager-users-menu-item.active {
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            90deg,
+            #743bd8,
+            #8b3df0
+        );
+
+    box-shadow:
+        0 5px 14px
+        rgba(124, 58, 237, 0.25);
+}
+
+
+.manager-users-menu-item.active:hover {
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed,
+            #9333ea
+        );
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.manager-users-sidebar-footer {
+    padding: 12px 10px 14px;
+
+    border-top: 1px solid;
+}
+
+
+.dark .manager-users-sidebar-footer {
+    border-color: #263652;
+}
+
+
+.light .manager-users-sidebar-footer {
+    border-color: #e5e7eb;
+}
+
+
+/* ==========================================
+   LOGOUT
+========================================== */
+
+.manager-users-logout {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 12px 15px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: transparent;
+
+    color: #8fa0ba;
+
+    font-size: 0.88rem;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.manager-users-logout:hover {
+    color: #f87171;
+
+    background:
+        rgba(239, 68, 68, 0.08);
+}
+
+
+/* ==========================================
+   CONTEÚDO
+========================================== */
+
+.manager-users-content {
+    width: calc(100% - 228px);
+
+    min-height: 100vh;
+
+    margin-left: 228px;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.manager-users-header {
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 28px;
+
+    border-bottom: 1px solid;
+}
+
+
+.dark .manager-users-header {
+    background: #161f30;
+    border-color: #263652;
+}
+
+
+.light .manager-users-header {
+    background: #ffffff;
+    border-color: #e5e7eb;
+}
+
+
+.manager-users-header-spacer {
+    flex: 1;
+}
+
+
+.manager-users-header-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+/* ==========================================
+   BOTÕES HEADER
+========================================== */
+
+.manager-users-theme-toggle,
+.manager-users-notification,
+.manager-users-open-menu {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 9px;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.dark .manager-users-theme-toggle,
+.dark .manager-users-notification,
+.dark .manager-users-open-menu {
+    color: #94a3b8;
+}
+
+
+.light .manager-users-theme-toggle,
+.light .manager-users-notification,
+.light .manager-users-open-menu {
+    color: #64748b;
+}
+
+
+.manager-users-theme-toggle:hover,
+.manager-users-notification:hover,
+.manager-users-open-menu:hover {
+    background:
+        rgba(245, 158, 11, 0.1);
+
+    color: #f59e0b;
+}
+
+
+/* ==========================================
+   PERFIL
+========================================== */
+
+.manager-users-profile {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    margin-left: 3px;
+}
+
+
+.manager-users-avatar {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 0.68rem;
+    font-weight: 700;
+
+    color: #9b6cff;
+
+    background: #222040;
+
+    border: 1px solid #342f60;
+}
+
+
+.manager-users-profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.manager-users-profile-info strong {
+    font-size: 0.72rem;
+}
+
+
+.manager-users-profile-info span {
+    margin-top: 1px;
+
+    font-size: 0.62rem;
+
+    color: #8fa0ba;
+}
+
+
+/* ==========================================
+   MAIN
+========================================== */
+
+.manager-users-main {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 20px 34px;
+}
+
+
+/* ==========================================
+   TÍTULO
+========================================== */
+
+.manager-users-title {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 17px;
+
+    color: #f1f5f9;
+}
+
+
+.light .manager-users-title {
+    color: #1f2937;
+}
+
+
+.manager-users-title svg {
+    color: #f59e0b;
+}
+
+
+.manager-users-title h1 {
+    margin: 0;
+
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+
+.manager-users-title span {
+    color: #94a3b8;
+
+    font-size: 0.72rem;
+}
+
+
+/* ==========================================
+   PESQUISA
+========================================== */
+
+.manager-users-search {
+     min-height: 65px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 0 10px;
+
+    margin-bottom: 11px;
+
+    border: 1px solid;
+
+    border-radius: 10px;
+}
+
+
+.dark .manager-users-search {
+    background: #101827;
+    border-color: #29415f;
+}
+
+
+.light .manager-users-search {
+    background: #ffffff;
+    border-color: #dbe1ea;
+}
+
+
+.manager-users-search svg {
+    color: #8fa0ba;
+}
+
+
+.manager-users-search input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: inherit;
+
+    font-family: inherit;
+    font-size: 0.88rem;
+}
+
+
+.manager-users-search input::placeholder {
+    color: #64748b;
+}
+
+
+/* ==========================================
+   LISTA
+========================================== */
+
+.manager-users-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+
+/* ==========================================
+   CARD USUÁRIO
+========================================== */
+
+.manager-user-card {
+    min-height: 85px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 12px 15px;
+
+    border: 1px solid;
+
+    border-radius: 10px;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.dark .manager-user-card {
+    background: #18202f;
+    border-color: #273244;
+}
+
+
+.light .manager-user-card {
+    background: #ffffff;
+    border-color: #e5e7eb;
+}
+
+
+.manager-user-card:hover {
+    transform:
+        translateY(-1px);
+
+    border-color: #f59e0b;
+}
+
+
+/* ==========================================
+   AVATAR
+========================================== */
+
+.manager-user-avatar {
+    width: 32px;
+    height: 32px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    color: #f59e0b;
+
+    background: #3a2b10;
+}
+
+
+/* ==========================================
+   INFORMAÇÕES
+========================================== */
+
+.manager-user-info {
+    flex: 1;
+
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+
+.manager-user-info strong {
+    color: inherit;
+
+    font-size: 0.83rem;
+}
+
+
+.manager-user-info span {
+    color: #7f93ad;
+
+    font-size: 0.71rem;
+}
+
+
+.manager-user-info small {
+    color: #8fa0ba;
+
+    font-size: 0.68rem;
+}
+
+
+/* ==========================================
+   AÇÕES
+========================================== */
+
+.manager-user-actions {
+    display: flex;
+
+    gap: 7px;
+}
+
+
+.manager-user-edit,
+.manager-user-delete {
+    width: 27px;
+    height: 27px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid;
+
+    border-radius: 8px;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.dark .manager-user-edit,
+.dark .manager-user-delete {
+    border-color: #243858;
+}
+
+
+.light .manager-user-edit,
+.light .manager-user-delete {
+    border-color: #e5e7eb;
+}
+
+
+.manager-user-edit {
+    color: #94a3b8;
+}
+
+
+.manager-user-edit:hover {
+    color: #60a5fa;
+
+    background:
+        rgba(59, 130, 246, 0.08);
+}
+
+
+.manager-user-delete {
+    color: #7f1d1d;
+}
+
+
+.manager-user-delete:hover {
+    color: #ef4444;
+
+    background:
+        rgba(239, 68, 68, 0.08);
+}
+
+
+/* ==========================================
+   EMPTY
+========================================== */
+
+.manager-users-empty {
+    min-height: 200px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    color: #8fa0ba;
+
+    border: 1px dashed #263650;
+
+    border-radius: 10px;
+
+    font-size: 0.78rem;
+}
+
+
+.manager-users-empty svg {
+    color: #f59e0b;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+.manager-users-open-menu {
+    display: none;
+}
+
+
+.manager-users-close-menu {
+    display: none;
+
+    margin-left: auto;
+
+    border: none;
+
+    background: transparent;
+
+    color: inherit;
+
+    cursor: pointer;
+}
+
+
+.manager-users-overlay {
+    display: none;
+}
+
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+@media (max-width: 768px) {
+
+    .manager-users-sidebar {
+        width: 250px;
+
+        transform:
+            translateX(-100%);
+    }
+
+
+    .manager-users-sidebar.open {
+        transform:
+            translateX(0);
+    }
+
+
+    .manager-users-close-menu {
+        display: flex;
+    }
+
+
+    .manager-users-overlay {
+        display: block;
+
+        position: fixed;
+
+        inset: 0;
+
+        z-index: 90;
+
+        background:
+            rgba(0, 0, 0, 0.55);
+    }
+
+
+    .manager-users-content {
+        width: 100%;
+
+        margin-left: 0;
+    }
+
+
+    .manager-users-header {
+        padding: 0 15px;
+    }
+
+
+    .manager-users-open-menu {
+        display: flex;
+    }
+
+
+    .manager-users-main {
+        padding: 18px;
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 500px) {
+
+    .manager-users-profile-info {
+        display: none;
+    }
+
+
+    .manager-users-search {
+        width: 100%;
+    }
+
+
+    .manager-user-card {
+        gap: 9px;
+
+        padding: 10px;
+    }
+
+
+    .manager-user-info small {
+        white-space: nowrap;
+
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+    }
+
+}

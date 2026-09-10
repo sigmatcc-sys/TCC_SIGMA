@@ -1,0 +1,934 @@
+/* ==========================================
+   COMPANY DASHBOARD
+========================================== */
+
+.company-dashboard {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* ==========================================
+   TEMA ESCURO
+========================================== */
+
+.company-dashboard.dark {
+    background: #111827;
+    border-color: #273244;
+    color: #e5e7eb;
+}
+
+
+/* ==========================================
+   TEMA CLARO
+========================================== */
+
+.company-dashboard.light {
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+
+/* ==========================================
+   SIDEBAR
+========================================== */
+
+.company-sidebar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 228px;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 100;
+
+    border-right: 1px solid;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+
+/* DARK */
+
+.dark .company-sidebar {
+    background: #18202f;
+    border-color: #273244;
+}
+
+
+/* LIGHT */
+
+.light .company-sidebar {
+    background: #ffffff;
+    border-color: #e5e7eb;
+}
+
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.company-logo {
+    height: 79px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 0 18px;
+
+    border-bottom: 1px solid;
+}
+
+.dark .company-logo {
+    border-color: #263652;
+}
+
+.light .company-logo {
+    border-color: #e5e7eb;
+}
+
+
+.company-logo-icon {
+    width: 37px;
+    height: 37px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    color: #dbeafe;
+
+    background:
+        linear-gradient(
+            135deg,
+            #22c55e,
+            #179445
+        );
+}
+
+
+.company-logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.company-logo-text strong {
+    font-size: 1.08rem;
+    letter-spacing: 0.02em;
+}
+
+.company-logo-text span {
+    margin-top: 1px;
+
+    font-size: 0.72rem;
+
+    color: #8fa0ba;
+}
+
+
+/* ==========================================
+   BOTÃO FECHAR
+========================================== */
+
+.close-menu {
+    display: none;
+
+    margin-left: auto;
+
+    border: none;
+    background: transparent;
+
+    color: inherit;
+
+    cursor: pointer;
+}
+
+
+/* ==========================================
+   MENU
+========================================== */
+
+.company-menu {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+
+    padding: 12px 10px;
+
+    flex: 1;
+}
+
+
+/* ==========================================
+   ITEM
+========================================== */
+
+.company-menu-item {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 12px 15px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 0.88rem;
+    font-weight: 500;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+/* DARK */
+
+.dark .company-menu-item {
+    color: #8fa0ba;
+}
+
+
+/* LIGHT */
+
+.light .company-menu-item {
+    color: #64748b;
+}
+
+
+/* HOVER */
+
+.dark .company-menu-item:hover {
+    background: 
+        rgba(34, 197, 94, 0.2);
+    color: #dbeafe;
+}
+
+.light .company-menu-item:hover {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+
+/* ATIVO */
+
+.company-menu-item.active {
+    color: #ffffff;
+
+    background: #22c55e;
+
+    box-shadow:
+        0 5px 15px
+        rgba(34, 197, 94, 0.2);
+}
+
+.dark .company-menu-item.active:hover {
+    color: #ffffff;
+
+    background: #22c55e;
+
+    box-shadow:
+        0 5px 15px
+        rgba(34, 197, 94, 0.2);
+}
+
+
+/* ==========================================
+   FOOTER SIDEBAR
+========================================== */
+
+.company-sidebar-footer {
+    padding: 12px 10px 14px;
+
+    border-top: 1px solid;
+}
+
+.dark .company-sidebar-footer {
+    border-color: #263652;
+}
+
+.light .company-sidebar-footer {
+    border-color: #e5e7eb;
+}
+
+
+/* ==========================================
+   LOGOUT
+========================================== */
+
+.company-logout {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 12px 15px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    color: #8fa0ba;
+
+    font-size: 0.88rem;
+}
+
+.company-logout:hover {
+    color: #f87171;
+
+    background:
+        rgba(239, 68, 68, 0.08);
+}
+
+
+/* ==========================================
+   CONTEÚDO
+========================================== */
+
+.company-content {
+    width: calc(100% - 228px);
+
+    min-height: 100vh;
+
+    margin-left: 228px;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.company-header {
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 28px;
+
+    border-bottom: 1px solid;
+}
+
+.dark .company-header {
+    background: #161f30;
+    border-color: #263652;
+}
+
+.light .company-header {
+    background: #ffffff;
+    border-color: #e5e7eb;
+}
+
+
+.header-spacer {
+    flex: 1;
+}
+
+
+/* ==========================================
+   HEADER ACTIONS
+========================================== */
+
+.company-header-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+/* ==========================================
+   BOTÕES HEADER
+========================================== */
+
+.theme-toggle,
+.notification-button,
+.open-menu {
+    width: 37px;
+    height: 37px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 9px;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.dark .theme-toggle,
+.dark .notification-button,
+.dark .open-menu {
+    color: #8fa0ba;
+}
+
+.light .theme-toggle,
+.light .notification-button,
+.light .open-menu {
+    color: #64748b;
+}
+
+.theme-toggle:hover,
+.notification-button:hover,
+.open-menu:hover {
+    background: rgba(59, 130, 246, 0.1);
+
+    color: #4f8ef7;
+}
+
+
+/* ==========================================
+   NOTIFICAÇÃO
+========================================== */
+
+.notification-button {
+    position: relative;
+}
+
+.notification-indicator {
+    position: absolute;
+
+    top: 7px;
+    right: 7px;
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #4f8ef7;
+}
+
+
+/* ==========================================
+   PERFIL HEADER
+========================================== */
+
+.company-profile-header {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    padding-left: 8px;
+
+    text-decoration: none;
+
+    color: inherit;
+}
+
+
+.company-profile-avatar {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 0.68rem;
+    font-weight: 700;
+
+    color: #6ea8ff;
+
+    background: #1b2d4b;
+
+    border: 1px solid #28446e;
+}
+
+
+.company-profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.company-profile-info strong {
+    font-size: 0.77rem;
+}
+
+.company-profile-info span {
+    font-size: 0.65rem;
+
+    color: #8fa0ba;
+}
+
+
+/* ==========================================
+   CONTEÚDO PRINCIPAL
+========================================== */
+
+.company-dashboard-main {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 22px 34px;
+}
+
+
+/* ==========================================
+   BEM-VINDO
+========================================== */
+
+.company-welcome {
+    margin-bottom: 28px;
+}
+
+.company-welcome h1 {
+    margin: 0 0 6px;
+
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.company-welcome p {
+    margin: 0;
+
+    font-size: 0.88rem;
+
+    color: #8fa0ba;
+}
+
+
+/* ==========================================
+   ESTATÍSTICAS
+========================================== */
+
+.company-stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 26px;
+}
+
+
+/* ==========================================
+   CARD
+========================================== */
+
+.company-stat-card {
+    min-height: 134px;
+
+    padding: 18px;
+
+    border-radius: 13px;
+
+    border: 1px solid;
+
+    transition:
+        transform 0.2s ease,
+        border 0.2s ease;
+}
+
+.dark .company-stat-card {
+    background: #18202f;
+    border-color: #273244;
+}
+
+.light .company-stat-card {
+    background: #ffffff;
+    border-color: #e5e7eb;
+}
+
+.company-stat-card:hover {
+    transform: translateY(-2px);
+
+    border-color: #22c55e;
+}
+
+
+/* ==========================================
+   ÍCONE ESTATÍSTICA
+========================================== */
+
+.stat-icon {
+    width: 39px;
+    height: 39px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 13px;
+
+    border-radius: 11px;
+}
+
+
+/* Visualizações */
+
+.stat-icon.views {
+    color: #4f8ef7;
+    background: rgba(59, 130, 246, 0.12);
+}
+
+
+/* Avaliação */
+
+.stat-icon.rating {
+    color: #f59e0b;
+    background: rgba(245, 158, 11, 0.12);
+}
+
+
+/* Mensagens */
+
+.stat-icon.messages {
+    color: #14b8a6;
+    background: rgba(20, 184, 166, 0.12);
+}
+
+
+/* Anúncios */
+
+.stat-icon.ads {
+    color: #8b5cf6;
+    background: rgba(139, 92, 246, 0.12);
+}
+
+
+/* ==========================================
+   CONTEÚDO ESTATÍSTICA
+========================================== */
+
+.stat-content {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.stat-content strong {
+    font-size: 1.45rem;
+}
+
+.stat-content span {
+    font-size: 0.78rem;
+
+    color: #8fa0ba;
+}
+
+
+/* ==========================================
+   AÇÕES
+========================================== */
+
+.company-actions {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+/* ==========================================
+   CARD AÇÃO
+========================================== */
+
+.company-action-card {
+    min-height: 215px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 28px;
+
+    border-radius: 13px;
+
+    border: 1px solid;
+}
+
+.dark .company-action-card {
+    background: #161f30;
+    border-color: #263652;
+}
+
+.light .company-action-card {
+    background: #ffffff;
+    border-color: #e5e7eb;
+}
+
+
+/* ==========================================
+   ÍCONE AÇÃO
+========================================== */
+
+.action-icon {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 15px;
+
+    border-radius: 15px;
+}
+
+
+/* Anúncio */
+
+.action-icon.ads {
+    color: #4f8ef7;
+
+    background:
+        rgba(34, 197, 94, 0.12);
+}
+
+
+/* Mensagens */
+
+.action-icon.messages {
+    color: #14b8a6;
+
+    background:
+        rgba(20, 184, 166, 0.12);
+}
+
+
+/* ==========================================
+   TEXTO AÇÃO
+========================================== */
+
+.company-action-card h2 {
+    margin: 0 0 8px;
+
+    font-size: 1rem;
+}
+
+.company-action-card p {
+    margin: 0 0 16px;
+
+    font-size: 0.8rem;
+
+    color: #8fa0ba;
+}
+
+
+/* ==========================================
+   BOTÕES
+========================================== */
+
+.primary-action-button,
+.secondary-action-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 9px 15px;
+
+    border-radius: 9px;
+
+    text-decoration: none;
+
+    font-size: 0.78rem;
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+
+/* PRIMÁRIO */
+
+.primary-action-button {
+    color: #ffffff;
+
+    background:#22c55e;
+}
+
+.primary-action-button:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 6px 15px
+        rgba(34, 197, 94, 0.2);
+}
+
+
+/* SECUNDÁRIO */
+
+.secondary-action-button {
+    color: #dbeafe;
+
+    border: 1px solid #29436c;
+
+    background: transparent;
+}
+
+.secondary-action-button:hover {
+    background: #1b2d4b;
+}
+
+
+/* ==========================================
+   MENU MOBILE
+========================================== */
+
+.open-menu {
+    display: none;
+}
+
+
+/* ==========================================
+   OVERLAY
+========================================== */
+
+.dashboard-overlay {
+    display: none;
+}
+
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+@media (max-width: 1000px) {
+
+    .company-stats {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    /* SIDEBAR */
+
+    .company-sidebar {
+        width: 260px;
+
+        transform:
+            translateX(-100%);
+    }
+
+    .company-sidebar.open {
+        transform:
+            translateX(0);
+    }
+
+    .close-menu {
+        display: flex;
+    }
+
+
+    /* OVERLAY */
+
+    .dashboard-overlay {
+        display: block;
+
+        position: fixed;
+
+        inset: 0;
+
+        z-index: 90;
+
+        background:
+            rgba(0, 0, 0, 0.55);
+    }
+
+
+    /* CONTEÚDO */
+
+    .company-content {
+        width: 100%;
+
+        margin-left: 0;
+    }
+
+
+    /* HEADER */
+
+    .company-header {
+        padding: 0 15px;
+    }
+
+    .open-menu {
+        display: flex;
+    }
+
+
+    /* MAIN */
+
+    .company-dashboard-main {
+        padding: 22px 18px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .company-profile-info {
+        display: none;
+    }
+
+    .company-actions {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .company-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .company-welcome h1 {
+        font-size: 1.2rem;
+    }
+
+    .company-header-actions {
+        gap: 5px;
+    }
+
+}

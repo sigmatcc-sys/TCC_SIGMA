@@ -1,0 +1,418 @@
+/* ==========================================
+   Página
+========================================== */
+
+.auth-login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  transition: background .3s ease;
+}
+
+
+
+/* Tema Claro */
+
+.auth-login-page.light {
+  background: #f4f6f8;
+}
+
+/* Tema Escuro */
+
+.auth-login-page.dark {
+  background: #111827;
+}
+
+/* ==========================================
+   Card
+========================================== */
+
+.auth-login-card {
+  width: 100%;
+  max-width: 470px;
+  padding: 2.5rem;
+  border-radius: 24px;
+  transition: .3s;
+  background:rgba(255,255,255,.08); 
+  border:1px solid rgba(255,255,255,.15);
+  box-shadow:0 20px 40px rgba(0,0,0,.25);
+}
+
+.light .auth-login-card {
+  background: #ffffff;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, .08);
+  border:1px solid #000000;
+  color: #000000;
+}
+
+.auth-login-card span{
+    color: #9ca3af;
+}
+
+.light .auth-login-card span{
+    color: #16a34a;
+}
+
+.light .arrow{
+    stroke: #16a34a;
+}
+
+
+.dark .auth-login-card {
+  background: #1f2937;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, .35);
+}
+
+/* ==========================================
+   Botão voltar
+========================================== */
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+
+  text-decoration: none;
+
+  font-size: .95rem;
+  font-weight: 500;
+
+  margin-bottom: 2rem;
+
+  transition: .2s;
+}
+
+.light .back-button {
+  color: #000000;
+}
+
+.dark .back-button {
+  color: #000000;
+}
+
+.back-button:hover {
+  gap: .8rem;
+  color: #22c55e;
+}
+
+/* ==========================================
+   Cabeçalho
+========================================== */
+
+.auth-login-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Caixa do ícone */
+
+.icon-box {
+  width: 72px;
+  height: 72px;
+
+  margin: 0 auto 1.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 18px;
+
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+
+  color: white;
+
+  box-shadow: 0 10px 25px rgba(34, 197, 94, .35);
+}
+
+.auth-login-header h1 {
+  font-size: 2rem;
+  margin-bottom: .4rem;
+}
+
+.light .auth-login-header h1 {
+  color: #111827;
+}
+
+.dark .auth-login-header h1 {
+  color: #ffffff;
+}
+
+.auth-login-header p {
+  font-size: .98rem;
+}
+
+.light .auth-login-header p {
+  color: #6b7280;
+}
+
+.dark .auth-login-header p {
+  color: #9ca3af;
+}
+
+/* ==========================================
+   Formulário
+========================================== */
+
+.auth-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+.password-toggle{
+
+    /* Posição absoluta */
+    position:absolute;
+
+    /* Distância da direita */
+    right:15px;
+
+    /* Remove fundo */
+    background:none;
+
+    /* Remove borda */
+    border:none;
+
+    /* Cor */
+    stroke:#fa0101;
+
+    /* Cursor */
+    cursor:pointer;
+
+    /* Flex */
+    display:flex;
+
+    /* Centraliza horizontalmente */
+    justify-content:center;
+
+    /* Centraliza verticalmente */
+    align-items:center;
+
+    /* Suaviza alterações */
+    transition:all .3s ease;
+
+}
+
+.password-toggle svg {
+    stroke: #ffffff;
+}
+
+/* Hover */
+.password-toggle svg:hover{
+
+    /* Cor */
+    stroke:#16a34a;
+
+}
+
+/* Clique */
+.password-toggle:active{
+
+    /* Diminui um pouco */
+    transform:scale(.92);
+
+}
+
+/* ========================================= */
+/* TEMA CLARO                               */
+/* ========================================= */
+
+.light .password-toggle svg {
+    stroke: #111827;
+}
+
+.light .password-toggle svg:hover {
+    stroke: #16a34a;
+}
+
+
+/* Caso o botão ocupe toda largura */
+
+.auth-login-form button {
+  margin-top: .5rem;
+}
+
+/* ==========================================
+   Rodapé
+========================================== */
+
+.auth-login-footer {
+  text-align: center;
+}
+
+.auth-login-footer p {
+  font-size: .95rem;
+  margin-bottom: .7rem;
+}
+
+.light .auth-login-footer p {
+  color: #6b7280;
+}
+
+.dark .auth-login-footer p {
+  color: #9ca3af;
+}
+
+.auth-login-footer a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #22c55e;
+  transition: .2s;
+}
+
+.auth-login-footer a:hover {
+  color: #16a34a;
+}
+
+.forgot-password {
+  display: inline-block;
+  margin-top: .2rem;
+}
+
+/* ==========================================
+   Inputs
+========================================== */
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: .45rem;
+}
+
+.input-group label {
+  font-size: .95rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+.light .input-group label {
+  color: #374151;
+}
+
+.dark .input-group label {
+  color: #e5e7eb;
+}
+
+.input-group input {
+  width: 100%;
+  padding: .9rem 1rem;
+
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.15);
+
+  font-size: .95rem;
+
+  outline: none;
+
+  transition: .2s;
+}
+
+.light .input-group input {
+  background: white;
+  color: #111827;
+  border:1px solid #9ca3af;
+}
+
+.dark .input-group:hover input{
+
+    /* Clareia o fundo */
+    background:rgba(255,255,255,.12);
+
+}
+
+.light .input-group:hover input{
+    /* Fundo */
+    background:#f9fafb;
+
+    /* Borda */
+    border-color:#4b5563; 
+}
+
+.dark  .input-group  input::placeholder{
+    color:#94a3b8;
+}
+
+.dark .input-group input {
+  background: rgba(255,255,255,.08);
+  color: white;
+}
+
+.input-group input:focus {
+  border-color: #16a34a;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, .15);
+}
+
+/* ==========================================
+   Botão
+========================================== */
+
+.login-button {
+  margin-top: .5rem;
+
+  width: 100%;
+
+  padding: .95rem;
+
+  border: none;
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  background: #22c55e;
+  color: white;
+
+  transition: .25s;
+}
+
+.login-button:hover {
+  background: #16a34a;
+}
+
+/* ==========================================
+   Responsividade
+========================================== */
+
+@media (max-width: 768px) {
+
+  .auth-login-page {
+    padding: 1rem;
+  }
+
+  .auth-login-card {
+    padding: 2rem;
+    border-radius: 20px;
+  }
+
+  .icon-box {
+    width: 64px;
+    height: 64px;
+  }
+
+  .auth-login-header h1 {
+    font-size: 1.7rem;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .auth-login-card {
+    padding: 1.6rem;
+  }
+
+  .auth-login-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .back-button {
+    font-size: .9rem;
+  }
+
+}

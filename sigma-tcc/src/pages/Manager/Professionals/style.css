@@ -1,0 +1,916 @@
+/* ==========================================
+   MANAGER PROFESSIONALS
+========================================== */
+
+.manager-professionals {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* ==========================================
+   TEMA ESCURO
+========================================== */
+
+.manager-professionals.dark {
+    background: #111827;
+    border-color: #273244;
+    color: #e5e7eb;
+}
+
+
+/* ==========================================
+   TEMA CLARO
+========================================== */
+
+.manager-professionals.light {
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+
+/* ==========================================
+   SIDEBAR
+========================================== */
+
+.manager-professionals-sidebar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 228px;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 100;
+
+    border-right: 1px solid;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.dark .manager-professionals-sidebar {
+    background: #18202f;
+    border-color: #273244;
+}
+
+
+.light .manager-professionals-sidebar {
+    background: #ffffff;
+    border-color: #e5e7eb;
+}
+
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.manager-professionals-logo {
+    height: 79px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 0 18px;
+
+    border-bottom: 1px solid;
+}
+
+
+.dark .manager-professionals-logo {
+    border-color: #1d2b43;
+}
+
+
+.light .manager-professionals-logo {
+    border-color: #e5e7eb;
+}
+
+
+.manager-professionals-logo-icon {
+    width: 37px;
+    height: 37px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed,
+            #9333ea
+        );
+}
+
+
+.manager-professionals-logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.manager-professionals-logo-text strong {
+    font-size: 1.08rem;
+
+    letter-spacing: 0.02em;
+}
+
+
+.manager-professionals-logo-text span {
+    margin-top: 1px;
+
+    font-size: 0.78rem;
+
+    color: #8fa0ba;
+}
+
+
+/* ==========================================
+   MENU
+========================================== */
+
+.manager-professionals-menu {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+
+    padding: 12px 10px;
+
+    flex: 1;
+}
+
+
+.manager-professionals-menu-item {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 12px 15px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 0.88rem;
+    font-weight: 500;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.dark .manager-professionals-menu-item {
+    color: #94a3b8;
+}
+
+
+.light .manager-professionals-menu-item {
+    color: #64748b;
+}
+
+
+.dark .manager-professionals-menu-item:hover {
+    background:
+        rgba(139, 61, 240, 0.12);
+
+    color: #d8c7ff;
+}
+
+
+.light .manager-professionals-menu-item:hover {
+    background: #f2edff;
+
+    color: #7c3aed;
+}
+
+
+/* ==========================================
+   ITEM ATIVO
+========================================== */
+
+.manager-professionals-menu-item.active {
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            90deg,
+            #743bd8,
+            #8b3df0
+        );
+
+    box-shadow:
+        0 5px 14px
+        rgba(124, 58, 237, 0.25);
+}
+
+
+.manager-professionals-menu-item.active:hover {
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed,
+            #9333ea
+        );
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.manager-professionals-sidebar-footer {
+    padding: 12px 10px 14px;
+
+    border-top: 1px solid;
+}
+
+
+.dark .manager-professionals-sidebar-footer {
+    border-color: #263652;
+}
+
+
+.light .manager-professionals-sidebar-footer {
+    border-color: #e5e7eb;
+}
+
+
+/* ==========================================
+   LOGOUT
+========================================== */
+
+.manager-professionals-logout {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 12px 15px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: transparent;
+
+    color: #8fa0ba;
+
+    font-size: 0.88rem;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.manager-professionals-logout:hover {
+    color: #f87171;
+
+    background:
+        rgba(239, 68, 68, 0.08);
+}
+
+
+/* ==========================================
+   CONTEÚDO
+========================================== */
+
+.manager-professionals-content {
+    width: calc(100% - 228px);
+
+    min-height: 100vh;
+
+    margin-left: 228px;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.manager-professionals-header {
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 28px;
+
+    border-bottom: 1px solid;
+}
+
+
+.dark .manager-professionals-header {
+    background: #161f30;
+    border-color: #263652;
+}
+
+
+.light .manager-professionals-header {
+    background: #ffffff;
+    border-color: #e5e7eb;
+}
+
+
+.manager-professionals-header-spacer {
+    flex: 1;
+}
+
+
+.manager-professionals-header-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+/* ==========================================
+   BOTÕES HEADER
+========================================== */
+
+.manager-professionals-theme-toggle,
+.manager-professionals-notification,
+.manager-professionals-open-menu {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 9px;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.dark .manager-professionals-theme-toggle,
+.dark .manager-professionals-notification,
+.dark .manager-professionals-open-menu {
+    color: #94a3b8;
+}
+
+
+.light .manager-professionals-theme-toggle,
+.light .manager-professionals-notification,
+.light .manager-professionals-open-menu {
+    color: #64748b;
+}
+
+
+.manager-professionals-theme-toggle:hover,
+.manager-professionals-notification:hover,
+.manager-professionals-open-menu:hover {
+    background:
+        rgba(124, 58, 237, 0.1);
+
+    color: #8b3df0;
+}
+
+
+/* ==========================================
+   PERFIL
+========================================== */
+
+.manager-professionals-profile {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    margin-left: 3px;
+}
+
+
+.manager-professionals-avatar {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 0.68rem;
+    font-weight: 700;
+
+    color: #9b6cff;
+
+    background: #222040;
+
+    border: 1px solid #342f60;
+}
+
+
+.manager-professionals-profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.manager-professionals-profile-info strong {
+    font-size: 0.72rem;
+}
+
+
+.manager-professionals-profile-info span {
+    margin-top: 1px;
+
+    font-size: 0.62rem;
+
+    color: #8fa0ba;
+}
+
+
+/* ==========================================
+   MAIN
+========================================== */
+
+.manager-professionals-main {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 20px 34px;
+}
+
+
+/* ==========================================
+   TÍTULO
+========================================== */
+
+.manager-professionals-title {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 17px;
+
+    color: #f1f5f9;
+}
+
+
+.light .manager-professionals-title {
+    color: #1f2937;
+}
+
+
+.manager-professionals-title svg {
+    color: #10b981;
+}
+
+
+.manager-professionals-title h1 {
+    margin: 0;
+
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+
+.manager-professionals-title span {
+    color: #94a3b8;
+
+    font-size: 0.72rem;
+}
+
+
+/* ==========================================
+   PESQUISA
+========================================== */
+
+.manager-professionals-search {
+    min-height: 65px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 0 10px;
+
+    margin-bottom: 11px;
+
+    border: 1px solid;
+
+    border-radius: 10px;
+}
+
+
+.dark .manager-professionals-search {
+    background: #101827;
+    border-color: #29415f;
+}
+
+
+.light .manager-professionals-search {
+    background: #ffffff;
+    border-color: #dbe1ea;
+}
+
+
+.manager-professionals-search svg {
+    color: #8fa0ba;
+}
+
+
+.manager-professionals-search input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: inherit;
+
+    font-family: inherit;
+    font-size: 0.88rem;
+}
+
+
+.manager-professionals-search input::placeholder {
+    color: #64748b;
+}
+
+
+/* ==========================================
+   LISTA
+========================================== */
+
+.manager-professionals-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+
+/* ==========================================
+   CARD PROFISSIONAL
+========================================== */
+
+.manager-professional-card {
+    min-height: 85px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 12px 15px;
+
+    border: 1px solid;
+
+    border-radius: 10px;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.dark .manager-professional-card {
+    background: #18202f;
+    border-color: #273244;
+}
+
+
+.light .manager-professional-card {
+    background: #ffffff;
+    border-color: #e5e7eb;
+}
+
+
+.manager-professional-card:hover {
+    transform:
+        translateY(-1px);
+
+    border-color: #10b981;
+}
+
+
+/* ==========================================
+   AVATAR
+========================================== */
+
+.manager-professional-avatar {
+    width: 32px;
+    height: 32px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    color: #10b981;
+
+    background: #12372f;
+}
+
+
+/* ==========================================
+   INFORMAÇÕES
+========================================== */
+
+.manager-professional-info {
+    flex: 1;
+
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+
+.manager-professional-info strong {
+    color: inherit;
+
+    font-size: 0.83rem;
+}
+
+
+.manager-professional-info span {
+    color: #7f93ad;
+
+    font-size: 0.71rem;
+}
+
+
+.manager-professional-info small {
+    color: #8fa0ba;
+
+    font-size: 0.68rem;
+}
+
+
+/* ==========================================
+   AÇÕES
+========================================== */
+
+.manager-professional-actions {
+    display: flex;
+
+    gap: 7px;
+}
+
+
+.manager-professional-edit,
+.manager-professional-delete {
+    width: 27px;
+    height: 27px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid;
+
+    border-radius: 8px;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.dark .manager-professional-edit,
+.dark .manager-professional-delete {
+    border-color: #243858;
+}
+
+
+.light .manager-professional-edit,
+.light .manager-professional-delete {
+    border-color: #e5e7eb;
+}
+
+
+.manager-professional-edit {
+    color: #94a3b8;
+}
+
+
+.manager-professional-edit:hover {
+    color: #60a5fa;
+
+    background:
+        rgba(59, 130, 246, 0.08);
+}
+
+
+.manager-professional-delete {
+    color: #7f1d1d;
+}
+
+
+.manager-professional-delete:hover {
+    color: #ef4444;
+
+    background:
+        rgba(239, 68, 68, 0.08);
+}
+
+
+/* ==========================================
+   EMPTY
+========================================== */
+
+.manager-professionals-empty {
+    min-height: 200px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    color: #8fa0ba;
+
+    border: 1px dashed #263650;
+
+    border-radius: 10px;
+
+    font-size: 0.78rem;
+}
+
+
+.manager-professionals-empty svg {
+    color: #10b981;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+.manager-professionals-open-menu {
+    display: none;
+}
+
+
+.manager-professionals-close-menu {
+    display: none;
+
+    margin-left: auto;
+
+    border: none;
+
+    background: transparent;
+
+    color: inherit;
+
+    cursor: pointer;
+}
+
+
+.manager-professionals-overlay {
+    display: none;
+}
+
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+@media (max-width: 768px) {
+
+    .manager-professionals-sidebar {
+        width: 250px;
+
+        transform:
+            translateX(-100%);
+    }
+
+
+    .manager-professionals-sidebar.open {
+        transform:
+            translateX(0);
+    }
+
+
+    .manager-professionals-close-menu {
+        display: flex;
+    }
+
+
+    .manager-professionals-overlay {
+        display: block;
+
+        position: fixed;
+
+        inset: 0;
+
+        z-index: 90;
+
+        background:
+            rgba(0, 0, 0, 0.55);
+    }
+
+
+    .manager-professionals-content {
+        width: 100%;
+
+        margin-left: 0;
+    }
+
+
+    .manager-professionals-header {
+        padding: 0 15px;
+    }
+
+
+    .manager-professionals-open-menu {
+        display: flex;
+    }
+
+
+    .manager-professionals-main {
+        padding: 18px;
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 500px) {
+
+    .manager-professionals-profile-info {
+        display: none;
+    }
+
+
+    .manager-professionals-search {
+        width: 100%;
+    }
+
+
+    .manager-professional-card {
+        gap: 9px;
+
+        padding: 10px;
+    }
+
+
+    .manager-professional-info small {
+        white-space: nowrap;
+
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+    }
+
+}

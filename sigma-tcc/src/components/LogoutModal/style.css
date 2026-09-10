@@ -1,0 +1,261 @@
+/* ==========================================
+   OVERLAY
+========================================== */
+
+.logout-modal-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background:
+        rgba(0, 0, 0, 0.55);
+
+    backdrop-filter:
+        blur(4px);
+
+    animation:
+        fadeIn 0.2s ease;
+}
+
+
+/* ==========================================
+   CAIXA DO MODAL
+========================================== */
+
+.logout-modal {
+    width: 100%;
+    max-width: 380px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    border: 1px solid;
+
+    border-radius: 16px;
+
+    animation:
+        modalAppear 0.25s ease;
+}
+
+
+/* ==========================================
+   TEMA ESCURO
+========================================== */
+
+.dark .logout-modal {
+    background: #18202f;
+
+    border-color: #273244;
+
+    color: #e5e7eb;
+}
+
+
+/* ==========================================
+   TEMA CLARO
+========================================== */
+
+.light .logout-modal {
+    background: #ffffff;
+
+    border-color: #e5e7eb;
+
+    color: #1f2937;
+}
+
+
+/* ==========================================
+   ÍCONE
+========================================== */
+
+.logout-modal-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 18px;
+
+    border-radius: 50%;
+
+    color: #f87171;
+
+    background:
+        rgba(248, 113, 113, 0.12);
+}
+
+
+/* ==========================================
+   TEXTO
+========================================== */
+
+.logout-modal h2 {
+    margin: 0 0 9px;
+
+    font-size: 1.2rem;
+}
+
+
+.logout-modal p {
+    margin: 0;
+
+    font-size: 0.85rem;
+
+    line-height: 1.5;
+
+    color: #8fa0ba;
+}
+
+
+/* ==========================================
+   BOTÕES
+========================================== */
+
+.logout-modal-actions {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+
+.cancel-logout-button,
+.confirm-logout-button {
+    flex: 1;
+
+    padding: 11px 15px;
+
+    border-radius: 9px;
+
+    font-size: 0.82rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+         0.1s ;
+}
+
+
+/* ==========================================
+   CANCELAR
+========================================== */
+
+.cancel-logout-button {
+    border: 1px solid;
+
+    background: transparent;
+}
+
+
+.dark .cancel-logout-button {
+    color: #e5e7eb;
+
+    border-color: #3b4658;
+}
+
+
+.light .cancel-logout-button {
+    color: #475569;
+
+    border-color: #dbe1ea;
+}
+
+
+.cancel-logout-button:hover {
+    transform:
+        translateY(-1px);
+}
+
+
+/* ==========================================
+   CONFIRMAR
+========================================== */
+
+.confirm-logout-button {
+    border: 1px solid #dc2626;
+
+    color: #ffffff;
+
+    background: #dc2626;
+}
+
+
+.confirm-logout-button:hover {
+    transform:
+        translateY(-1px);
+
+    background: #dc2626;
+
+    box-shadow:
+        0 6px 15px
+        rgba(239, 68, 68, 0.25);
+}
+
+
+/* ==========================================
+   ANIMAÇÕES
+========================================== */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+@keyframes modalAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(10px)
+            scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+@media (max-width: 450px) {
+
+    .logout-modal {
+        padding: 24px 20px;
+    }
+
+
+    .logout-modal-actions {
+        flex-direction: column;
+    }
+
+}

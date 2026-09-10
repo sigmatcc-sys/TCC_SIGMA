@@ -1,0 +1,1320 @@
+/* ==========================================
+   USER SEARCH
+========================================== */
+
+.user-search-main {
+    width: 100%;
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding: 28px 34px 50px;
+}
+
+
+/* ==========================================
+   PAGE HEADER
+========================================== */
+
+.search-page-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 22px;
+}
+
+
+.search-page-title {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    color: #3b82f6;
+}
+
+
+.search-page-title h1 {
+    margin: 0;
+
+    color: #e5e7eb;
+
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+
+.light .search-page-title h1 {
+    color: #1f2937;
+}
+
+
+.search-page-header p {
+    margin: 7px 0 0 32px;
+
+    color: #8fa0ba;
+
+    font-size: 0.82rem;
+}
+
+
+.results-count {
+    color: #71829e;
+
+    font-size: 0.76rem;
+}
+
+
+/* ==========================================
+   PESQUISA GRANDE
+========================================== */
+
+.big-search-section {
+    margin-bottom: 28px;
+}
+
+
+.big-search-box {
+    width: 100%;
+    min-height: 64px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 0 9px 0 20px;
+
+    border: 1px solid;
+
+    border-radius: 15px;
+
+    transition:
+        border 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.dark .big-search-box {
+    background: #18202f;
+    border-color: #334563;
+
+    color: #8fa0ba;
+}
+
+
+.light .big-search-box {
+    background: #ffffff;
+    border-color: #dbe2ea;
+
+    color: #64748b;
+
+    box-shadow:
+        0 4px 15px
+        rgba(15, 23, 42, 0.04);
+}
+
+
+.big-search-box:focus-within {
+    border-color: #3b82f6;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(59, 130, 246, 0.12);
+}
+
+
+.big-search-box > svg {
+    flex-shrink: 0;
+
+    color: #3b82f6;
+}
+
+
+.big-search-box input {
+    flex: 1;
+
+    min-width: 0;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: inherit;
+
+    font-size: 0.95rem;
+}
+
+
+.dark .big-search-box input {
+    color: #e5e7eb;
+}
+
+
+.light .big-search-box input {
+    color: #1f2937;
+}
+
+
+.big-search-box input::placeholder {
+    color: #71829e;
+}
+
+
+/* ==========================================
+   LIMPAR BUSCA
+========================================== */
+
+.clear-search {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: #71829e;
+
+    cursor: pointer;
+}
+
+
+.clear-search:hover {
+    color: #ef4444;
+
+    background: rgba(239, 68, 68, 0.08);
+}
+
+
+/* ==========================================
+   BOTÃO BUSCAR
+========================================== */
+
+.big-search-button {
+    min-height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 0 21px;
+
+    border: none;
+    border-radius: 10px;
+
+    color: #ffffff;
+
+    background: #3b82f6;
+
+    cursor: pointer;
+
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+
+.big-search-button:hover {
+    background: #2563eb;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 6px 15px
+        rgba(59, 130, 246, 0.25);
+}
+
+
+.search-hint {
+    display: block;
+
+    margin-top: 8px;
+    margin-left: 4px;
+
+    color: #71829e;
+
+    font-size: 0.7rem;
+}
+
+
+/* ==========================================
+   ÁREA DE RESULTADOS
+========================================== */
+
+.search-results-area {
+    display: grid;
+
+    grid-template-columns: 253px 1fr;
+
+    gap: 22px;
+
+    align-items: start;
+}
+
+
+/* ==========================================
+   FILTROS
+========================================== */
+
+.search-filters {
+    padding: 20px;
+
+    border: 1px solid;
+
+    border-radius: 13px;
+
+    position: sticky;
+    top: 96px;
+}
+
+
+.dark .search-filters {
+    background: #18202f;
+    border-color: #273244;
+}
+
+
+.light .search-filters {
+    background: #ffffff;
+    border-color: #e5e7eb;
+}
+
+
+.filters-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 23px;
+}
+
+
+.filters-header > div {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    color: #3b82f6;
+}
+
+
+.filters-header strong {
+    color: inherit;
+
+    font-size: 0.9rem;
+}
+
+
+/* ==========================================
+   GRUPO
+========================================== */
+
+.filter-group {
+    margin-bottom: 22px;
+}
+
+
+.filter-group > label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #8fa0ba;
+
+    font-size: 0.74rem;
+    font-weight: 500;
+}
+
+
+/* ==========================================
+   INPUT FILTRO
+========================================== */
+
+.filter-input {
+    min-height: 39px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 0 10px;
+
+    border: 1px solid;
+
+    border-radius: 9px;
+}
+
+
+.dark .filter-input {
+    background: #111a2b;
+    border-color: #2d3d59;
+}
+
+
+.light .filter-input {
+    background: #f8fafc;
+    border-color: #dbe2ea;
+}
+
+
+.filter-input svg {
+    flex-shrink: 0;
+
+    color: #71829e;
+}
+
+
+.filter-input input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: inherit;
+
+    font-size: 0.72rem;
+}
+
+
+.filter-input input::placeholder {
+    color: #71829e;
+}
+
+
+/* ==========================================
+   SELECT
+========================================== */
+
+.filter-select {
+    position: relative;
+}
+
+
+.filter-select select {
+    width: 100%;
+    height: 39px;
+
+    appearance: none;
+
+    padding: 0 35px 0 11px;
+
+    border: 1px solid;
+
+    border-radius: 9px;
+
+    outline: none;
+
+    cursor: pointer;
+
+    font-size: 0.73rem;
+}
+
+
+.dark .filter-select select {
+    background: #111a2b;
+    border-color: #2d3d59;
+    color: #e5e7eb;
+}
+
+
+.light .filter-select select {
+    background: #f8fafc;
+    border-color: #dbe2ea;
+    color: #1f2937;
+}
+
+
+.filter-select svg {
+    position: absolute;
+
+    top: 50%;
+    right: 11px;
+
+    transform: translateY(-50%);
+
+    pointer-events: none;
+
+    color: #71829e;
+}
+
+
+/* ==========================================
+   PREÇO
+========================================== */
+
+.filter-label-row {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-bottom: 11px;
+}
+
+
+.filter-label-row label {
+    color: #8fa0ba;
+
+    font-size: 0.74rem;
+}
+
+
+.filter-label-row strong {
+    color: #3b82f6;
+
+    font-size: 0.7rem;
+}
+
+
+.price-range {
+    width: 100%;
+
+    accent-color: #3b82f6;
+
+    cursor: pointer;
+}
+
+
+.range-values {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 5px;
+
+    color: #71829e;
+
+    font-size: 0.62rem;
+}
+
+
+/* ==========================================
+   AVALIAÇÃO
+========================================== */
+
+.rating-options {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+
+.rating-option {
+    min-height: 35px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 0 10px;
+
+    border: 1px solid;
+
+    border-radius: 8px;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    font-size: 0.7rem;
+
+    transition: 0.2s;
+}
+
+
+.dark .rating-option {
+    color: #8fa0ba;
+    border-color: #2d3d59;
+}
+
+
+.light .rating-option {
+    color: #64748b;
+    border-color: #dbe2ea;
+}
+
+
+.rating-option:hover {
+    border-color: #3b82f6;
+
+    color: #3b82f6;
+}
+
+
+.rating-option.active {
+    color: #ffffff;
+
+    background: #3b82f6;
+
+    border-color: #3b82f6;
+}
+
+
+/* ==========================================
+   LIMPAR FILTROS
+========================================== */
+
+.clear-filters-button {
+    width: 100%;
+
+    min-height: 38px;
+
+    border: 1px solid #29436c;
+
+    border-radius: 9px;
+
+    background: transparent;
+
+    color: #8fb5f5;
+
+    cursor: pointer;
+
+    font-size: 0.72rem;
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+
+.clear-filters-button:hover {
+    background: rgba(59, 130, 246, 0.1);
+
+    border-color: #3b82f6;
+
+    color: #3b82f6;
+}
+
+
+/* ==========================================
+   RESULTADOS
+========================================== */
+
+.search-results {
+    min-width: 0;
+}
+
+
+.results-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 14px;
+}
+
+
+.results-top > div {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+}
+
+
+.results-top strong {
+    color: #e5e7eb;
+
+    font-size: 0.9rem;
+}
+
+
+.light .results-top strong {
+    color: #1f2937;
+}
+
+
+.results-top span {
+    color: #71829e;
+
+    font-size: 0.7rem;
+}
+
+
+/* ==========================================
+   ORDENAÇÃO
+========================================== */
+
+.sort-button {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #71829e;
+
+    cursor: pointer;
+
+    font-size: 0.7rem;
+}
+
+
+.sort-button:hover {
+    color: #3b82f6;
+}
+
+
+/* ==========================================
+   GRID
+========================================== */
+
+.search-services-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 16px;
+}
+
+
+/* ==========================================
+   CARD
+========================================== */
+
+.user-service-card {
+    overflow: hidden;
+
+    border-radius: 13px;
+
+    border: 1px solid;
+
+    transition:
+        transform 0.2s ease,
+        border 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.dark .user-service-card {
+    background: #18202f;
+    border-color: #273244;
+}
+
+
+.light .user-service-card {
+    background: #ffffff;
+    border-color: #e5e7eb;
+}
+
+
+.user-service-card:hover {
+    transform: translateY(-3px);
+
+    border-color: #38557f;
+
+    box-shadow:
+        0 12px 25px
+        rgba(0, 0, 0, 0.12);
+}
+
+
+/* ==========================================
+   IMAGE
+========================================== */
+
+.user-service-image {
+    height: 150px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.user-service-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.3s ease;
+}
+
+
+.user-service-card:hover
+.user-service-image img {
+    transform: scale(1.04);
+}
+
+
+/* ==========================================
+   CATEGORY
+========================================== */
+
+.user-service-category {
+    position: absolute;
+
+    top: 10px;
+    left: 10px;
+
+    padding: 5px 9px;
+
+    border-radius: 8px;
+
+    color: #ffffff;
+
+    background: #3b82f6;
+
+    font-size: 0.63rem;
+    font-weight: 600;
+}
+
+
+/* ==========================================
+   FAVORITO
+========================================== */
+
+.service-favorite {
+    position: absolute;
+
+    top: 9px;
+    right: 9px;
+
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 50%;
+
+    color: #71829e;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.service-favorite:hover {
+    color: #ef4444;
+
+    transform: scale(1.05);
+}
+
+
+/* ==========================================
+   CARD CONTENT
+========================================== */
+
+.user-service-content {
+    padding: 13px;
+}
+
+
+.user-service-content h3 {
+    margin: 0 0 8px;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    color: inherit;
+
+    font-size: 0.84rem;
+}
+
+
+/* ==========================================
+   RATING
+========================================== */
+
+.service-rating {
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+
+    margin-bottom: 8px;
+
+    font-size: 0.68rem;
+}
+
+
+.stars {
+    display: flex;
+
+    gap: 1px;
+
+    color: #fbbf24;
+}
+
+
+.service-rating strong {
+    color: inherit;
+}
+
+
+.service-rating span {
+    color: #71829e;
+}
+
+
+/* ==========================================
+   LOCATION
+========================================== */
+
+.service-location {
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+
+    margin-bottom: 13px;
+
+    color: #8fa0ba;
+
+    font-size: 0.64rem;
+}
+
+
+.service-location svg {
+    flex-shrink: 0;
+}
+
+
+/* ==========================================
+   FOOTER CARD
+========================================== */
+
+.service-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 8px;
+}
+
+
+.service-price {
+    display: flex;
+    align-items: baseline;
+
+    gap: 3px;
+}
+
+
+.service-price strong {
+    color: #3b82f6;
+
+    font-size: 0.94rem;
+}
+
+
+.service-price span {
+    color: #8fa0ba;
+
+    font-size: 0.6rem;
+}
+
+
+/* ==========================================
+   DETAILS
+========================================== */
+
+.service-details-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px 10px;
+
+    border-radius: 8px;
+
+    color: #ffffff;
+
+    background: #3b82f6;
+
+    text-decoration: none;
+
+    font-size: 0.62rem;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition: 0.2s;
+}
+
+
+.service-details-button:hover {
+    background: #2563eb;
+
+    transform: translateY(-1px);
+}
+
+
+/* ==========================================
+   SEM RESULTADOS
+========================================== */
+
+.no-results {
+    min-height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    border: 1px solid;
+
+    border-radius: 13px;
+}
+
+
+.dark .no-results {
+    background: #18202f;
+    border-color: #273244;
+
+    color: #71829e;
+}
+
+
+.light .no-results {
+    background: #ffffff;
+    border-color: #e5e7eb;
+
+    color: #64748b;
+}
+
+
+.no-results svg {
+    margin-bottom: 10px;
+
+    color: #3b82f6;
+}
+
+
+.no-results h2 {
+    margin: 0 0 7px;
+
+    color: inherit;
+
+    font-size: 1rem;
+}
+
+
+.no-results p {
+    margin: 0 0 17px;
+
+    font-size: 0.76rem;
+}
+
+
+.no-results button {
+    padding: 9px 15px;
+
+    border: none;
+    border-radius: 8px;
+
+    color: #ffffff;
+
+    background: #3b82f6;
+
+    cursor: pointer;
+
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+.open-menu {
+    display: none;
+}
+
+
+.dashboard-overlay {
+    display: none;
+}
+
+
+/* ==========================================
+   1150px
+========================================== */
+
+@media (max-width: 1150px) {
+
+    .search-results-area {
+        grid-template-columns: 230px 1fr;
+    }
+
+
+    .search-services-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* ==========================================
+   900px
+========================================== */
+
+@media (max-width: 900px) {
+
+    .search-results-area {
+        grid-template-columns: 1fr;
+    }
+
+
+    .search-filters {
+        position: static;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 15px;
+    }
+
+
+    .filters-header {
+        grid-column: 1 / -1;
+
+        margin-bottom: 0;
+    }
+
+
+    .filter-group {
+        margin-bottom: 0;
+    }
+
+
+    .clear-filters-button {
+        align-self: end;
+    }
+
+}
+
+
+/* ==========================================
+   768px
+========================================== */
+
+@media (max-width: 768px) {
+
+    .user-sidebar {
+        width: 260px;
+
+        transform: translateX(-100%);
+    }
+
+
+    .user-sidebar.open {
+        transform: translateX(0);
+    }
+
+
+    .close-menu {
+        display: flex;
+    }
+
+
+    .dashboard-overlay {
+        display: block;
+
+        position: fixed;
+
+        inset: 0;
+
+        z-index: 90;
+
+        background: rgba(0, 0, 0, 0.55);
+    }
+
+
+    .user-content {
+        width: 100%;
+
+        margin-left: 0;
+    }
+
+
+    .user-header {
+        padding: 10px 15px;
+
+        gap: 8px;
+    }
+
+
+    .open-menu {
+        display: flex;
+
+        flex-shrink: 0;
+    }
+
+
+    .user-header-search {
+        flex: 1;
+    }
+
+
+    .user-search-main {
+        padding: 22px 18px 40px;
+    }
+
+
+    .big-search-box {
+        min-height: 58px;
+    }
+
+
+    .big-search-button {
+        padding: 0 14px;
+    }
+
+}
+
+
+/* ==========================================
+   600px
+========================================== */
+
+@media (max-width: 600px) {
+
+    .user-profile-info {
+        display: none;
+    }
+
+
+    .search-page-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .search-page-header p {
+        margin-left: 0;
+    }
+
+
+    .search-results-area {
+        grid-template-columns: 1fr;
+    }
+
+
+    .search-filters {
+        grid-template-columns: 1fr;
+    }
+
+
+    .search-services-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .user-service-image {
+        height: 190px;
+    }
+
+
+    .big-search-box {
+        padding-left: 14px;
+    }
+
+
+    .big-search-button {
+        width: 42px;
+
+        padding: 0;
+    }
+
+
+    .big-search-button span {
+        display: none;
+    }
+
+
+    .big-search-button {
+        font-size: 0;
+    }
+
+
+    .big-search-button svg {
+        margin: 0;
+    }
+
+}
+
+
+/* ==========================================
+   450px
+========================================== */
+
+@media (max-width: 450px) {
+
+    .user-search-main {
+        padding: 20px 14px 35px;
+    }
+
+
+    .search-page-title h1 {
+        font-size: 1.2rem;
+    }
+
+
+    .big-search-box {
+        min-height: 53px;
+    }
+
+
+    .big-search-box input {
+        font-size: 0.78rem;
+    }
+
+
+    .user-header-actions {
+        gap: 2px;
+    }
+
+
+    .theme-toggle,
+    .notification-button,
+    .open-menu {
+        width: 34px;
+        height: 34px;
+    }
+
+}
