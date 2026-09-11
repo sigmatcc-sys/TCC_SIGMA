@@ -1,4 +1,4 @@
-name: SIGMA CI
+name: SIGMA CI TESTE
 
 on:
   push:
