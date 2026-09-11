@@ -4,18 +4,18 @@ on:
   push:
     branches:
       - main
-      - develop
 
   pull_request:
     branches:
       - main
-      - develop
 
 jobs:
-  test:
+  quality:
+
     runs-on: ubuntu-latest
 
     steps:
+
       - name: Baixar código
         uses: actions/checkout@v4
 
@@ -34,5 +34,5 @@ jobs:
       - name: Executar testes
         run: npm run test
 
-      - name: Fazer build
+      - name: Gerar build
         run: npm run build
